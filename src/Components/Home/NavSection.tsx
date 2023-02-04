@@ -59,7 +59,7 @@ const $Container = styled.nav`
   display: flex;
   align-items: center;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 50px;
 
   justify-content: space-between;
   border-bottom: 1px solid gray;
