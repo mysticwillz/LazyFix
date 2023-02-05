@@ -98,10 +98,12 @@ const $Container = styled.nav`
     height: 40px;
     cursor: pointer;
     background-color: #4361ee;
-    border-radius: 8px;
+    border-radius: 4px;
     border: none;
     margin-left: 50px;
     transition: all 0.3s ease-in-out;
+    font-weight: medium;
+    font-size: 16px;
     &:hover {
       cursor: pointer;
       background-color: transparent;

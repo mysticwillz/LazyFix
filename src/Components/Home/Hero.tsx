@@ -14,8 +14,8 @@ function Hero() {
             </h1>
             <p> With our flexible styles and components,</p>{" "}
             <p className="top">you can save a lot</p>
-            <$HeroButton>Get started</$HeroButton>
-            <p> Built by the creator of; </p>
+            <$HeroButton>Start Building Now</$HeroButton>
+            <p> Built by the creator of: </p>
           </$HeroText>
           <$HeroImage>
             <img
@@ -91,9 +91,16 @@ const $HeroButton = styled.button`
   color: ${theme.home_text};
   height: 42px;
   display: flex;
+  font-size: 18px;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
   border: none;
   cursor: pointer;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    width: 250px;
+  }
 `;
