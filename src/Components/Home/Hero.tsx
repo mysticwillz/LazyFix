@@ -12,8 +12,12 @@ function Hero() {
               Unlock your full potential, <br />
               Utilize already built <br /> <span>components.</span>
             </h1>
-            <p> With our flexible styles and components,</p>{" "}
-            <p className="top">you can save a lot</p>
+            <p>
+              Let us take care of the small web components, so you can focus on
+              optimizing and executing quality code. With our flexible styles
+              and components,
+            </p>{" "}
+            <p className="top">you can save a lot of coding time.</p>
             <$HeroButton>Start Building Now</$HeroButton>
             <p> Built by the creator of: </p>
           </$HeroText>
@@ -65,7 +69,8 @@ const $HeroText = styled.div`
   }
   p {
     font-size: 18px;
-    margin-top: 40px;
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
   }
   .top {
     margin-top: 5px;

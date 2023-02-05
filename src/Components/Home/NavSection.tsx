@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { theme } from "../../Theme";
 import { AiFillGithub } from "react-icons/ai";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
-
+import HeroImage from "../../Assets/Hero.png";
 function NavSection() {
   const [toggleMode, setToggleMode] = useState(false);
   return (
@@ -11,7 +11,7 @@ function NavSection() {
       <$OverallContainer>
         <$Container>
           <$LogoContainer>
-            <img src="" alt="" />
+            <img src={HeroImage} alt="logo" />
           </$LogoContainer>
           <div className="nav_links">
             <ul>

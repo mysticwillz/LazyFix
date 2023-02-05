@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Footer from "../Components/Home/Footer";
 import Hero from "../Components/Home/Hero";
 
 import NavSection from "../Components/Home/NavSection";
@@ -9,6 +10,7 @@ function Home() {
     <Container>
       <NavSection />
       <Hero />
+      <Footer />
     </Container>
   );
 }
