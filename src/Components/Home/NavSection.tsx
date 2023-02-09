@@ -67,7 +67,7 @@ const $Container = styled.nav`
   width: 100%;
   max-width: 1440px;
   height: 70px;
-  color: ${theme.home_text};
+  color: ${theme.home_bg};
 
   .nav_links {
     width: 600px;
@@ -90,7 +90,7 @@ const $Container = styled.nav`
     }
   }
   button {
-    color: inherit;
+    color: ${theme.home_text};
     display: flex;
     align-items: center;
     justify-content: center;

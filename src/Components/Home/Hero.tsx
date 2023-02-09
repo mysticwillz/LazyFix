@@ -57,7 +57,7 @@ const $HeroText = styled.div`
   justify-content: center;
 
   height: 100%;
-  color: ${theme.home_text};
+  color: ${theme.home_bg};
   flex-direction: column;
 
   h1 {
