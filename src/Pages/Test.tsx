@@ -2,6 +2,7 @@ import { useContext } from "react";
 import styled from "styled-components";
 import NavSection from "../Components/Home/NavSection";
 import { ModeContext } from "../Context/ModeContext";
+import Sidebar from "../Layouts/Sidebar";
 import { theme } from "../Theme";
 
 function Test() {
@@ -10,6 +11,7 @@ function Test() {
     <>
       <Container color={toggleTheme ? theme.home_text : theme.home_bg}>
         <NavSection toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
+        <Sidebar />
       </Container>
     </>
   );
@@ -20,6 +22,5 @@ const Container = styled.main`
   background-color: ${(props) => props.color};
   width: 100%;
   max-width: 100%;
-  height: 100vh;
-  max-height: 100vh;
+  height: auto;
 `;
