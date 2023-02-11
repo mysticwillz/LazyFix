@@ -1,12 +1,20 @@
 import { Routes, Route } from "react-router-dom";
-import { HomePage } from "./Pages";
+import { HomePage, TestPage } from "./Pages";
 import "./index.css";
+import { ModeContext } from "./Context/ModeContext";
+import { useState } from "react";
 function App() {
+  const [toggleTheme, setToggleTheme] = useState<boolean>(true);
   return (
     <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
+      <ModeContext.Provider value={{ toggleTheme, setToggleTheme }}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+        <Routes>
+          <Route path="/test" element={<TestPage />} />
+        </Routes>
+      </ModeContext.Provider>
     </>
   );
 }

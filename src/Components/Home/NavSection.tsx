@@ -1,15 +1,18 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 import { theme } from "../../Theme";
 import { AiFillGithub } from "react-icons/ai";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import HeroImage from "../../Assets/Hero.png";
-function NavSection() {
-  const [toggleMode, setToggleMode] = useState(false);
+
+interface Props {
+  toggleTheme: boolean;
+  setToggleTheme: (toggler: boolean) => void;
+}
+function NavSection({ toggleTheme, setToggleTheme }: Props) {
   return (
     <>
       <$OverallContainer>
-        <$Container>
+        <$Container color={toggleTheme ? theme.home_bg : theme.home_text}>
           <$LogoContainer>
             <img src={HeroImage} alt="logo" />
           </$LogoContainer>
@@ -23,20 +26,24 @@ function NavSection() {
             <button>Get Started</button>
             <div className="line"></div>
             <AiFillGithub className="icons" />
-            {toggleMode ? (
-              <MdLightMode
+            {!toggleTheme ? (
+              <div
                 onClick={() => {
-                  setToggleMode(!toggleMode);
+                  setToggleTheme(!toggleTheme);
                 }}
                 className="icons"
-              />
+              >
+                <MdLightMode className="icons" />
+              </div>
             ) : (
-              <MdDarkMode
+              <div
                 onClick={() => {
-                  setToggleMode(!toggleMode);
+                  setToggleTheme(!toggleTheme);
                 }}
                 className="icons"
-              />
+              >
+                <MdDarkMode className="icons" />
+              </div>
             )}
           </div>
         </$Container>
@@ -67,7 +74,7 @@ const $Container = styled.nav`
   width: 100%;
   max-width: 1440px;
   height: 70px;
-  color: ${theme.home_bg};
+  color: ${(props) => props.color};
 
   .nav_links {
     width: 600px;

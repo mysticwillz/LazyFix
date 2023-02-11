@@ -1,13 +1,18 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import HeroImage from "../../Assets/Hero.png";
+import { ModeContext } from "../../Context/ModeContext";
 import { theme } from "../../Theme";
 
-function Hero() {
+interface Props {
+  toggleTheme: boolean;
+}
+function Hero({ toggleTheme }: Props) {
   return (
     <>
       <$OverallContainer>
         <$HeroContainer>
-          <$HeroText>
+          <$HeroText color={toggleTheme ? theme.home_bg : theme.home_text}>
             <h1>
               Unlock your full potential, <br />
               Utilize already built <br /> <span>components.</span>
@@ -55,9 +60,10 @@ const $HeroText = styled.div`
   width: 55%;
   display: flex;
   justify-content: center;
+  color: ${(props) => props.color};
 
   height: 100%;
-  color: ${theme.home_bg};
+
   flex-direction: column;
 
   h1 {
