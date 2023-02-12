@@ -21,6 +21,7 @@ export default Test;
 const Container = styled.main`
   background-color: ${(props) => props.color};
   width: 100%;
-  max-width: 100%;
+  max-width: 1440px;
   height: auto;
+  font-family: "Outfit", sans-serif;
 `;
