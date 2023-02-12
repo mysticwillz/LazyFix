@@ -32,6 +32,16 @@ function Sidebar() {
             <li>How to use</li>
           </Components>
         </Container>
+        <h2>Sponsors</h2>
+        <SponsorsContainer>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </SponsorsContainer>
       </ContainerWrapper>
     </>
   );
@@ -44,13 +54,20 @@ const ContainerWrapper = styled.section`
   display: flex;
   flex-direction: column;
   padding-left: 10px;
-  overflow-y: scroll;
+
   border-right: 1px solid gray;
-  ::-webkit-scrollbar {
-    width: 10px;
+  h2 {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #4361ee;
+    margin: 10px 0;
   }
 
-  /* Track 
+  /* ::-webkit-scrollbar {
+    width: 10px;
+  }
+ Track 
   &::-webkit-scrollbar-track {
     background: #f1f1f1;
   }
@@ -83,7 +100,7 @@ const Container = styled.div`
     line-height: 24px;
     font-weight: medium;
     padding: 0 10px;
-    margin: 40px auto;
+    margin: 40px auto 30px;
   }
   h2 {
     font-size: 20px;
@@ -135,5 +152,27 @@ const Components = styled.ul`
       border-left: 1px solid #4361ee;
       color: #4361ee;
     }
+  }
+`;
+
+const SponsorsContainer = styled.div`
+  display: flex;
+  justify-content: between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 42px;
+    background-color: antiquewhite;
+    border: 1px solid gray;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
   }
 `;
