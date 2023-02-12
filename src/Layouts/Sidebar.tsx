@@ -49,7 +49,7 @@ function Sidebar() {
 
 export default Sidebar;
 const ContainerWrapper = styled.section`
-  width: 300px;
+  width: 20%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -57,8 +57,8 @@ const ContainerWrapper = styled.section`
 
   border-right: 1px solid gray;
   h2 {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 24px;
     font-weight: bold;
     color: #4361ee;
     margin: 10px 0;
@@ -103,8 +103,8 @@ const Container = styled.div`
     margin: 40px auto 30px;
   }
   h2 {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 24px;
     font-weight: bold;
     color: #4361ee;
   }
@@ -118,8 +118,8 @@ const GetStarted = styled.ul`
   color: white;
 
   li {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: normal;
     cursor: pointer;
     list-style-type: none;
@@ -140,8 +140,8 @@ const Components = styled.ul`
   color: white;
 
   li {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: normal;
     cursor: pointer;
     list-style-type: none;
@@ -157,7 +157,7 @@ const Components = styled.ul`
 
 const SponsorsContainer = styled.div`
   display: flex;
-  justify-content: between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 

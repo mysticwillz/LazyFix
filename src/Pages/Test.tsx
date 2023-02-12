@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import styled from "styled-components";
+import Button from "../Components/Buttons/Button";
 import NavSection from "../Components/Home/NavSection";
 import { ModeContext } from "../Context/ModeContext";
 import Sidebar from "../Layouts/Sidebar";
@@ -9,19 +10,26 @@ function Test() {
   const { toggleTheme, setToggleTheme } = useContext(ModeContext);
   return (
     <>
-      <Container color={toggleTheme ? theme.home_text : theme.home_bg}>
+      <MainContainer color={toggleTheme ? theme.home_text : theme.home_bg}>
         <NavSection toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
-        <Sidebar />
-      </Container>
+        <Container>
+          <Sidebar />
+          <Button />
+        </Container>
+      </MainContainer>
     </>
   );
 }
 
 export default Test;
-const Container = styled.main`
+const MainContainer = styled.main`
   background-color: ${(props) => props.color};
   width: 100%;
   max-width: 1440px;
   height: auto;
   font-family: "Outfit", sans-serif;
+`;
+const Container = styled.section`
+  display: flex;
+  justify-content: space-between;
 `;
