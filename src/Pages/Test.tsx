@@ -13,8 +13,9 @@ function Test() {
       <MainContainer color={toggleTheme ? theme.home_text : theme.home_bg}>
         <NavSection toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
         <Container>
-          <Sidebar />
-          <Button />
+          <Sidebar toggleTheme={toggleTheme} />
+
+          <Button toggleTheme={toggleTheme} />
         </Container>
       </MainContainer>
     </>

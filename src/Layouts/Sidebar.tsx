@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
-function Sidebar() {
+import { theme } from "../Theme";
+interface toggleProps {
+  toggleTheme: boolean;
+}
+function Sidebar({ toggleTheme }: toggleProps) {
   const [searchInput, setSearchInput] = useState<string>("");
   return (
     <>
@@ -14,12 +17,20 @@ function Sidebar() {
             placeholder="search for components"
           />
           <h2>Documentation</h2>
-          <GetStarted>
+          <GetStarted
+            color={
+              toggleTheme ? theme.app_text_light_big : theme.app_text_dark_big
+            }
+          >
             <li>Get started</li>
             <li>How to use</li>
           </GetStarted>
           <h2>Components</h2>
-          <Components>
+          <Components
+            color={
+              toggleTheme ? theme.app_text_light_big : theme.app_text_dark_big
+            }
+          >
             <li>Buttons</li>
             <li>Sliders</li>
             <li>Navigation Bars</li>
@@ -94,13 +105,18 @@ const Container = styled.div`
     width: 100%;
     height: 40px;
     outline: none;
-    border: gray;
+    background-color: #2d9ef54f;
+    border: 1px solid gray;
     border-radius: 4px;
     font-size: 18px;
     line-height: 24px;
     font-weight: medium;
     padding: 0 10px;
     margin: 40px auto 30px;
+
+    &:focus {
+      background-color: white;
+    }
   }
   h2 {
     font-size: 18px;
@@ -115,7 +131,7 @@ const GetStarted = styled.ul`
   display: flex;
   flex-direction: column;
 
-  color: white;
+  color: ${(props) => props.color};
 
   li {
     font-size: 16px;
@@ -137,7 +153,7 @@ const Components = styled.ul`
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: ${(props) => props.color};
 
   li {
     font-size: 16px;
