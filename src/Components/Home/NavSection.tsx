@@ -1,14 +1,18 @@
+import { useState } from "react";
 import styled from "styled-components";
+
 import { theme } from "../../Theme";
 import { AiFillGithub } from "react-icons/ai";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import HeroImage from "../../Assets/Hero.png";
+import { HiMenu, HiMenuAlt3 } from "react-icons/hi";
 
 interface Props {
   toggleTheme: boolean;
   setToggleTheme: (toggler: boolean) => void;
 }
 function NavSection({ toggleTheme, setToggleTheme }: Props) {
+  const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
     <>
       <$OverallContainer>
@@ -24,6 +28,21 @@ function NavSection({ toggleTheme, setToggleTheme }: Props) {
             </ul>
 
             <button>Get Started</button>
+            {!showMenu ? (
+              <HiMenu
+                onClick={() => {
+                  setShowMenu(!showMenu);
+                }}
+                className="menu"
+              />
+            ) : (
+              <HiMenuAlt3
+                onClick={() => {
+                  setShowMenu(!showMenu);
+                }}
+                className="menu"
+              />
+            )}
             <div className="line"></div>
             <AiFillGithub className="icons" />
             {!toggleTheme ? (
@@ -66,8 +85,8 @@ const $Container = styled.nav`
   display: flex;
   align-items: center;
   margin: 0 auto;
-  padding: 0 50px;
-
+  padding: 0 8px;
+  align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid gray;
   overflow: hidden;
@@ -76,17 +95,34 @@ const $Container = styled.nav`
   height: 70px;
   color: ${(props) => props.color};
 
+  @media (min-width: 768px) {
+    padding: 0 50px;
+  }
+
   .nav_links {
-    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 200px;
     display: flex;
     align-items: center;
+
+    @media (min-width: 768px) {
+      display: flex;
+      width: 600px;
+    }
   }
   ul {
     width: 250px;
     list-style-type: none;
-    display: flex;
+
     align-items: center;
     justify-content: space-between;
+    display: none;
+    @media (min-width: 768px) {
+      display: flex;
+      width: 250px;
+    }
   }
   li {
     transition: all 0.3s ease-in-out;
@@ -111,17 +147,24 @@ const $Container = styled.nav`
     transition: all 0.3s ease-in-out;
     font-weight: medium;
     font-size: 16px;
+    display: none;
     &:hover {
       cursor: pointer;
       background-color: transparent;
       border: 1px solid #4361ee;
+    }
+    @media (min-width: 768px) {
+      display: block;
     }
   }
   .line {
     height: 50px;
     width: 1px;
     background-color: gray;
-    margin: 0px 20px 0px 40px;
+    margin: 0px 13px 0px 13px;
+    @media (min-width: 768px) {
+      margin: 0px 20px 0px 40px;
+    }
   }
 
   .icons {
@@ -130,13 +173,26 @@ const $Container = styled.nav`
     padding-right: 15px;
     cursor: pointer;
   }
+  .menu {
+    height: 30px;
+    width: 30px;
+
+    cursor: pointer;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
 `;
 const $LogoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
+  width: 120px;
   height: 40px;
+
+  @media (min-width: 768px) {
+    width: 150px;
+  }
 
   img {
     width: 100%;

@@ -54,10 +54,13 @@ const $HeroContainer = styled.main`
   align-items: center;
   width: 100%;
   height: 80vh;
-  padding: 0 50px;
+  padding: 0 8px;
+  @media (min-width: 768px) {
+    padding: 0 50px;
+  }
 `;
 const $HeroText = styled.div`
-  width: 55%;
+  width: 100%;
   display: flex;
   justify-content: center;
   color: ${(props) => props.color};
@@ -81,6 +84,9 @@ const $HeroText = styled.div`
   .top {
     margin-top: 5px;
   }
+  @media (min-width: 768px) {
+    width: 55%;
+  }
 `;
 const $HeroImage = styled.div`
   width: 600px;
@@ -89,10 +95,13 @@ const $HeroImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  display: none;
   img {
     width: 100%;
     height: 100%;
+  }
+  @media (min-width: 768px) {
+    display: block;
   }
 `;
 
