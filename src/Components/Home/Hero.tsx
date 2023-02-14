@@ -3,6 +3,7 @@ import styled from "styled-components";
 import HeroImage from "../../Assets/Hero.png";
 import { ModeContext } from "../../Context/ModeContext";
 import { theme } from "../../Theme";
+import Footer from "./Footer";
 
 interface Props {
   toggleTheme: boolean;
@@ -19,12 +20,11 @@ function Hero({ toggleTheme }: Props) {
             </h1>
             <p>
               Let us take care of the small web components, so you can focus on
-              optimizing and executing quality code. With our flexible styles
-              and components,
+              optimizing and executing quality code.
             </p>{" "}
-            <p className="top">you can save a lot of coding time.</p>
             <$HeroButton>Start Building Now</$HeroButton>
             <p> Built by the creator of: </p>
+            <Footer />
           </$HeroText>
           <$HeroImage>
             <img
@@ -42,8 +42,8 @@ export default Hero;
 const $OverallContainer = styled.main`
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+
+  margin: 0 auto;
 
   font-family: "Outfit", sans-serif;
 `;
@@ -53,7 +53,7 @@ const $HeroContainer = styled.main`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 80vh;
+  max-height: 100vh;
   padding: 0 8px;
   @media (min-width: 768px) {
     padding: 0 50px;

@@ -14,18 +14,6 @@ function Footer() {
         <div>
           <img src="" alt="" />
         </div>
-        <div>
-          <img src="" alt="" />
-        </div>
-        <div>
-          <img src="" alt="" />
-        </div>
-        <div>
-          <img src="" alt="" />
-        </div>
-        <div>
-          <img src="" alt="" />
-        </div>
       </$Wrapper>
     </$Container>
   );
@@ -35,16 +23,15 @@ export default Footer;
 
 const $Container = styled.main`
   display: flex;
-  width: 100%;
+
   align-items: center;
   justify-content: start;
+  margin-top: 10px;
 `;
 const $Wrapper = styled.section`
   display: flex;
-  width: 100%;
+  width: 80%;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 50px;
 
   div {
     width: 100px;
@@ -52,5 +39,6 @@ const $Wrapper = styled.section`
     border: 1px solid blue;
     background-color: #fff;
     cursor: pointer;
+    margin: 0 5px;
   }
 `;

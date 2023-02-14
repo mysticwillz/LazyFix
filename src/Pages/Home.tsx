@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import styled from "styled-components";
-import Footer from "../Components/Home/Footer";
+
 import Hero from "../Components/Home/Hero";
 
 import NavSection from "../Components/Home/NavSection";
@@ -13,7 +13,6 @@ function Home() {
     <Container color={toggleTheme ? theme.home_text : theme.home_bg}>
       <NavSection toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
       <Hero toggleTheme={toggleTheme} />
-      <Footer />
     </Container>
   );
 }
@@ -26,4 +25,5 @@ const Container = styled.main`
   max-width: 100%;
   height: 100vh;
   max-height: 100vh;
+  overflow-x: hidden;
 `;
