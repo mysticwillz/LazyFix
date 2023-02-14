@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import styled from "styled-components";
 
 import Hero from "../Components/Home/Hero";
@@ -9,10 +9,20 @@ import { theme } from "../Theme";
 
 function Home() {
   const { toggleTheme, setToggleTheme } = useContext(ModeContext);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
     <Container color={toggleTheme ? theme.home_text : theme.home_bg}>
-      <NavSection toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
-      <Hero toggleTheme={toggleTheme} />
+      <NavSection
+        toggleTheme={toggleTheme}
+        setToggleTheme={setToggleTheme}
+        showMenu={showMenu}
+        setShowMenu={setShowMenu}
+      />
+      <Hero
+        toggleTheme={toggleTheme}
+        showMenu={showMenu}
+        setShowMenu={setShowMenu}
+      />
     </Container>
   );
 }

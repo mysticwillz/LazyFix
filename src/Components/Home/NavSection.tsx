@@ -9,10 +9,16 @@ import { HiMenu, HiMenuAlt3 } from "react-icons/hi";
 
 interface Props {
   toggleTheme: boolean;
+  showMenu: boolean;
   setToggleTheme: (toggler: boolean) => void;
+  setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
-function NavSection({ toggleTheme, setToggleTheme }: Props) {
-  const [showMenu, setShowMenu] = useState<boolean>(false);
+function NavSection({
+  toggleTheme,
+  setToggleTheme,
+  setShowMenu,
+  showMenu,
+}: Props) {
   return (
     <>
       <$OverallContainer>
@@ -144,14 +150,13 @@ const $Container = styled.nav`
     border-radius: 4px;
     border: none;
     margin-left: 50px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in;
     font-weight: medium;
     font-size: 16px;
     display: none;
     &:hover {
       cursor: pointer;
-      background-color: transparent;
-      border: 1px solid #4361ee;
+      background-color: #223bac;
     }
     @media (min-width: 768px) {
       display: block;

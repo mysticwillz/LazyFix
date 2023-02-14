@@ -1,14 +1,20 @@
 import { useContext } from "react";
 import styled from "styled-components";
 import HeroImage from "../../Assets/Hero.png";
-import { ModeContext } from "../../Context/ModeContext";
+
 import { theme } from "../../Theme";
 import Footer from "./Footer";
+import NavModal from "./NavModal";
 
 interface Props {
   toggleTheme: boolean;
+
+  showMenu: boolean;
+
+  setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
-function Hero({ toggleTheme }: Props) {
+
+function Hero({ toggleTheme, showMenu, setShowMenu }: Props) {
   return (
     <>
       <$OverallContainer>
@@ -33,6 +39,7 @@ function Hero({ toggleTheme }: Props) {
             />
           </$HeroImage>
         </$HeroContainer>
+        {showMenu && <NavModal toggleTheme={toggleTheme} />}
       </$OverallContainer>
     </>
   );
@@ -42,7 +49,7 @@ export default Hero;
 const $OverallContainer = styled.main`
   width: 100%;
   display: flex;
-
+  position: relative;
   margin: 0 auto;
 
   font-family: "Outfit", sans-serif;
