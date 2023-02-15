@@ -77,8 +77,11 @@ const $HeroText = styled.div`
   flex-direction: column;
 
   h1 {
-    font-size: 52px;
+    font-size: 32px;
     font-weight: bold;
+    @media (min-width: 768px) {
+      font-size: 52px;
+    }
   }
   span {
     color: #4361ee;
