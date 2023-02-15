@@ -62,9 +62,13 @@ export default Sidebar;
 const ContainerWrapper = styled.section`
   width: 20%;
   height: 100%;
-  display: flex;
+
   flex-direction: column;
   padding-left: 10px;
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+  }
 
   border-right: 1px solid gray;
   h2 {

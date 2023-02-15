@@ -15,7 +15,10 @@ function Button({ toggleTheme }: toggleProps) {
 
 export default Button;
 const Container = styled.div`
-  width: 80%;
+  width: 100%;
   height: 100vh;
   background-color: ${(props) => props.color};
+  @media (min-width: 768px) {
+    width: 80%;
+  }
 `;
