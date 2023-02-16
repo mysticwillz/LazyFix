@@ -8,7 +8,10 @@ interface toggleProps {
 function Button({ toggleTheme }: toggleProps) {
   return (
     <Container color={toggleTheme ? theme.home_text : theme.home_bg}>
-      Button
+      <FirstButton></FirstButton>
+      <FirstButton></FirstButton>
+      <FirstButton></FirstButton>
+      <FirstButton></FirstButton>
     </Container>
   );
 }
@@ -16,9 +19,19 @@ function Button({ toggleTheme }: toggleProps) {
 export default Button;
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  border: 4px solid red;
   background-color: ${(props) => props.color};
   @media (min-width: 768px) {
     width: 80%;
   }
+`;
+
+const FirstButton = styled.div`
+  width: 600px;
+  height: 500px;
+  border: 4px solid red;
+  margin: 20px auto;
 `;

@@ -1,13 +1,17 @@
 import { useContext, useState } from "react";
 import styled from "styled-components";
-import Button from "../Components/Buttons/Button";
-import NavSection from "../Components/Home/NavSection";
-import { ModeContext } from "../Context/ModeContext";
-import Sidebar from "../Layouts/Sidebar";
-import SidebarMobile from "../Layouts/SidebarMobile";
-import { theme } from "../Theme";
+
 import { HiMenu, HiMenuAlt3 } from "react-icons/hi";
-function Test() {
+import NavSection from "../Components/Home/NavSection";
+import SidebarMobile from "../Components/Layouts/SidebarMobile";
+import Sidebar from "../Components/Layouts/Sidebar";
+import Button from "../Components/Buttons/Button";
+import { ModeContext } from "../Context/ModeContext";
+import { theme } from "../Theme";
+interface children {
+  children: React.ReactNode;
+}
+function AppLayouts({ children }: children) {
   const { toggleTheme, setToggleTheme } = useContext(ModeContext);
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
   return (
@@ -33,14 +37,14 @@ function Test() {
               className="show--bar"
             />
           )}
-          <Button toggleTheme={toggleTheme} />
+          {children}
         </Container>
       </MainContainer>
     </>
   );
 }
 
-export default Test;
+export default AppLayouts;
 const MainContainer = styled.main`
   background-color: ${(props) => props.color};
   width: 100%;

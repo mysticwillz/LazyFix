@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { theme } from "../Theme";
+import { theme } from "../../Theme";
+
 interface toggleProps {
   toggleTheme: boolean;
   showSidebar: boolean;
@@ -18,11 +19,7 @@ function SidebarMobile({ toggleTheme, showSidebar }: toggleProps) {
       <ContainerWrapper
         color={!showSidebar ? " translateX(-100%)" : "translateX(0%)"}
       >
-        <Wrapper
-          color={
-            toggleTheme ? theme.app_text_light_big : theme.app_text_dark_big
-          }
-        >
+        <Wrapper color={toggleTheme ? theme.home_text : theme.home_bg}>
           <Container>
             <input
               type="text"
@@ -33,7 +30,7 @@ function SidebarMobile({ toggleTheme, showSidebar }: toggleProps) {
             <h2>Documentation</h2>
             <GetStarted
               color={
-                toggleTheme ? theme.app_text_dark_big : theme.app_text_light_big
+                toggleTheme ? theme.app_text_light_big : theme.app_text_dark_big
               }
             >
               <li>Get started</li>
@@ -42,7 +39,7 @@ function SidebarMobile({ toggleTheme, showSidebar }: toggleProps) {
             <h2>Components</h2>
             <Components
               color={
-                toggleTheme ? theme.app_text_dark_big : theme.app_text_light_big
+                toggleTheme ? theme.app_text_light_big : theme.app_text_dark_big
               }
             >
               <li>Buttons</li>

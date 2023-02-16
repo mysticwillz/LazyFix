@@ -21,7 +21,7 @@ function NavSection({
 }: Props) {
   return (
     <>
-      <$OverallContainer>
+      <$OverallContainer color={toggleTheme ? theme.home_text : theme.home_bg}>
         <$Container color={toggleTheme ? theme.home_bg : theme.home_text}>
           <$LogoContainer>
             <img src={HeroImage} alt="logo" />
@@ -83,8 +83,11 @@ const $OverallContainer = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
-
+  position: fixed;
+  top: 0;
   font-family: "Outfit", sans-serif;
+  z-index: 30;
+  background-color: ${(props) => props.color};
 `;
 
 const $Container = styled.nav`

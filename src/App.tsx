@@ -1,8 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import { HomePage, TestPage } from "./Pages";
+import { ButtonsPage, HomePage } from "./Pages";
 import "./index.css";
 import { ModeContext } from "./Context/ModeContext";
 import { useState } from "react";
+
 function App() {
   const [toggleTheme, setToggleTheme] = useState<boolean>(true);
   return (
@@ -12,7 +13,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
         </Routes>
         <Routes>
-          <Route path="/test" element={<TestPage />} />
+          <Route path="/buttons" element={<ButtonsPage />} />
         </Routes>
       </ModeContext.Provider>
     </>

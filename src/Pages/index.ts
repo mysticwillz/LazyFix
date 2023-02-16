@@ -1,2 +1,2 @@
 export { default as HomePage } from "./Home";
-export { default as TestPage } from "./Test";
+export { default as ButtonsPage } from "./Buttons";

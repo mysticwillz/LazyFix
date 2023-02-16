@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { theme } from "../Theme";
+import { theme } from "../../Theme";
 interface toggleProps {
   toggleTheme: boolean;
 }
@@ -8,7 +8,7 @@ function Sidebar({ toggleTheme }: toggleProps) {
   const [searchInput, setSearchInput] = useState<string>("");
   return (
     <>
-      <ContainerWrapper>
+      <ContainerWrapper color={toggleTheme ? theme.home_text : theme.home_bg}>
         <Container>
           <input
             type="text"
@@ -62,10 +62,17 @@ export default Sidebar;
 const ContainerWrapper = styled.section`
   width: 20%;
   height: 100%;
-
+  background-color: ${(props) => props.color};
   flex-direction: column;
   padding-left: 10px;
   display: none;
+  position: fixed;
+  left: 0;
+  top: 70px;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
   @media (min-width: 768px) {
     display: flex;
   }
