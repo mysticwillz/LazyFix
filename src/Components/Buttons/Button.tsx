@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Container } from "../../Reusables/Styles";
 import { theme } from "../../Theme";
 
 interface toggleProps {
@@ -17,21 +18,30 @@ function Button({ toggleTheme }: toggleProps) {
 }
 
 export default Button;
-const Container = styled.div`
-  width: 100%;
-  position: absolute;
-  right: 0;
-  top: 70px;
-  border: 4px solid red;
-  background-color: ${(props) => props.color};
+
+const ComponentWrapper = styled.div`
+  background-color: white;
+  width: 90%;
+  height: 250px;
+
+  border: 1px solid #023047;
+  border-radius: 20px;
+  margin: 20px auto;
+
   @media (min-width: 768px) {
-    width: 80%;
+    height: 450px;
   }
 `;
-
 const FirstButton = styled.div`
-  width: 600px;
-  height: 500px;
-  border: 4px solid red;
+  background-color: white;
+  width: 90%;
+  height: 250px;
+
+  border: 1px solid #023047;
+  border-radius: 20px;
   margin: 20px auto;
+
+  @media (min-width: 768px) {
+    height: 450px;
+  }
 `;
