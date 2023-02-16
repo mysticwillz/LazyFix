@@ -1,6 +1,11 @@
-import React from "react";
 import styled from "styled-components";
-import { Container } from "../../Reusables/Styles";
+import {
+  Container,
+  Heading,
+  ComponentWrapper,
+  Title,
+  Components,
+} from "../../Reusables/Styles";
 import { theme } from "../../Theme";
 
 interface toggleProps {
@@ -9,39 +14,45 @@ interface toggleProps {
 function Button({ toggleTheme }: toggleProps) {
   return (
     <Container color={toggleTheme ? theme.home_text : theme.home_bg}>
-      <FirstButton></FirstButton>
-      <FirstButton></FirstButton>
-      <FirstButton></FirstButton>
-      <FirstButton></FirstButton>
+      <Heading color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+        {" "}
+        Button Components
+      </Heading>
+      <ComponentWrapper
+        color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
+      >
+        <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+          {" "}
+          singing button{" "}
+        </Title>
+        <h5>View React source code</h5>
+        <Components></Components>
+      </ComponentWrapper>
+      <ComponentWrapper>
+        <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+          dancing button{" "}
+        </Title>
+        <h5>View React source code</h5>
+        <Components></Components>
+      </ComponentWrapper>
+      <ComponentWrapper>
+        <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+          {" "}
+          vibrating button{" "}
+        </Title>
+        <h5>View React source code</h5>
+        <Components></Components>
+      </ComponentWrapper>
+      <ComponentWrapper>
+        <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+          {" "}
+          happy button{" "}
+        </Title>
+        <h5>View React source code</h5>
+        <Components></Components>
+      </ComponentWrapper>
     </Container>
   );
 }
 
 export default Button;
-
-const ComponentWrapper = styled.div`
-  background-color: white;
-  width: 90%;
-  height: 250px;
-
-  border: 1px solid #023047;
-  border-radius: 20px;
-  margin: 20px auto;
-
-  @media (min-width: 768px) {
-    height: 450px;
-  }
-`;
-const FirstButton = styled.div`
-  background-color: white;
-  width: 90%;
-  height: 250px;
-
-  border: 1px solid #023047;
-  border-radius: 20px;
-  margin: 20px auto;
-
-  @media (min-width: 768px) {
-    height: 450px;
-  }
-`;

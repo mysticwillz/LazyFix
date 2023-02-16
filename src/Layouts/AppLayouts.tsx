@@ -22,23 +22,23 @@ function AppLayouts({ children }: children) {
         <Container color={toggleTheme ? theme.home_bg : theme.home_text}>
           <SidebarMobile toggleTheme={toggleTheme} showSidebar={showSidebar} />
           <Sidebar toggleTheme={toggleTheme} />
-          {!showSidebar ? (
-            <HiMenu
-              onClick={() => {
-                setShowSidebar(!showSidebar);
-              }}
-              className="show--bar"
-            />
-          ) : (
-            <HiMenuAlt3
-              onClick={() => {
-                setShowSidebar(!showSidebar);
-              }}
-              className="show--bar"
-            />
-          )}
           {children}
         </Container>
+        {!showSidebar ? (
+          <HiMenu
+            onClick={() => {
+              setShowSidebar(!showSidebar);
+            }}
+            className="show--bar"
+          />
+        ) : (
+          <HiMenuAlt3
+            onClick={() => {
+              setShowSidebar(!showSidebar);
+            }}
+            className="show--bar"
+          />
+        )}
       </MainContainer>
     </>
   );
@@ -64,7 +64,7 @@ const Container = styled.section`
     bottom: 100px;
     width: 60px;
     height: 60px;
-    z-index: 3;
+    z-index: 15;
     color: ${(props) => props.color};
     @media (min-width: 768px) {
       display: none;
