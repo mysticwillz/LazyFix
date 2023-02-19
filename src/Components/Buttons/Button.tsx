@@ -7,6 +7,7 @@ import {
   Components,
 } from "../../Reusables/Styles";
 import { theme } from "../../Theme";
+import Slide from "./Slide/Slide";
 
 interface toggleProps {
   toggleTheme: boolean;
@@ -30,10 +31,12 @@ function Button({ toggleTheme }: toggleProps) {
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
-          dancing button{" "}
+          slide button{" "}
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <Slide />
+        </Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
