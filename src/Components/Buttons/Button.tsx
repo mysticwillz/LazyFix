@@ -7,6 +7,7 @@ import {
   Components,
 } from "../../Reusables/Styles";
 import { theme } from "../../Theme";
+import Border from "./Border/Border";
 import Glow from "./Glow/Glow";
 import MoveLeft from "./MoveLeft/MoveLeft";
 import Shine from "./Shine/Shine";
@@ -84,6 +85,16 @@ function Button({ toggleTheme }: toggleProps) {
         <h5>View React source code</h5>
         <Components>
           <Shine />
+        </Components>
+      </ComponentWrapper>
+      <ComponentWrapper>
+        <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+          {" "}
+          Border button effect
+        </Title>
+        <h5>View React source code</h5>
+        <Components>
+          <Border />
         </Components>
       </ComponentWrapper>
     </Container>
