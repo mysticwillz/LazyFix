@@ -9,6 +9,7 @@ import {
 import { theme } from "../../Theme";
 import Glow from "./Glow/Glow";
 import MoveLeft from "./MoveLeft/MoveLeft";
+import Shine from "./Shine/Shine";
 import Shutter from "./Shutter/Shutter";
 import Slide from "./Slide/Slide";
 import WindowClose from "./WindowClose/WindowClose";
@@ -73,6 +74,16 @@ function Button({ toggleTheme }: toggleProps) {
         <h5>View React source code</h5>
         <Components>
           <WindowClose />
+        </Components>
+      </ComponentWrapper>
+      <ComponentWrapper>
+        <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+          {" "}
+          shine button effect
+        </Title>
+        <h5>View React source code</h5>
+        <Components>
+          <Shine />
         </Components>
       </ComponentWrapper>
     </Container>
