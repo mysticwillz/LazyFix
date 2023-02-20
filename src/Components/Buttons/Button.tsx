@@ -10,6 +10,7 @@ import { theme } from "../../Theme";
 import Glow from "./Glow/Glow";
 import Shutter from "./Shutter/Shutter";
 import Slide from "./Slide/Slide";
+import WindowClose from "./WindowClose/WindowClose";
 
 interface toggleProps {
   toggleTheme: boolean;
@@ -21,6 +22,15 @@ function Button({ toggleTheme }: toggleProps) {
         {" "}
         Button Components
       </Heading>
+      <ComponentWrapper>
+        <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+          slide button effect{" "}
+        </Title>
+        <h5>View React source code</h5>
+        <Components>
+          <Slide />
+        </Components>
+      </ComponentWrapper>
       <ComponentWrapper
         color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
       >
@@ -31,15 +41,7 @@ function Button({ toggleTheme }: toggleProps) {
         <h5>View React source code</h5>
         <Components></Components>
       </ComponentWrapper>
-      <ComponentWrapper>
-        <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
-          slide button effect{" "}
-        </Title>
-        <h5>View React source code</h5>
-        <Components>
-          <Slide />
-        </Components>
-      </ComponentWrapper>
+
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
@@ -58,6 +60,16 @@ function Button({ toggleTheme }: toggleProps) {
         <h5>View React source code</h5>
         <Components>
           <Shutter />
+        </Components>
+      </ComponentWrapper>
+      <ComponentWrapper>
+        <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+          {" "}
+          Window Close button effect
+        </Title>
+        <h5>View React source code</h5>
+        <Components>
+          <WindowClose />
         </Components>
       </ComponentWrapper>
     </Container>
