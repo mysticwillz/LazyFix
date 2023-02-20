@@ -8,6 +8,7 @@ import {
 } from "../../Reusables/Styles";
 import { theme } from "../../Theme";
 import Glow from "./Glow/Glow";
+import MoveLeft from "./MoveLeft/MoveLeft";
 import Shutter from "./Shutter/Shutter";
 import Slide from "./Slide/Slide";
 import WindowClose from "./WindowClose/WindowClose";
@@ -36,10 +37,12 @@ function Button({ toggleTheme }: toggleProps) {
       >
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
-          singing button{" "}
+          Move Left Effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <MoveLeft />
+        </Components>
       </ComponentWrapper>
 
       <ComponentWrapper>
