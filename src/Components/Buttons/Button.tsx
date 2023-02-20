@@ -7,6 +7,8 @@ import {
   Components,
 } from "../../Reusables/Styles";
 import { theme } from "../../Theme";
+import Glow from "./Glow/Glow";
+import Shutter from "./Shutter/Shutter";
 import Slide from "./Slide/Slide";
 
 interface toggleProps {
@@ -31,7 +33,7 @@ function Button({ toggleTheme }: toggleProps) {
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
-          slide button{" "}
+          slide button effect{" "}
         </Title>
         <h5>View React source code</h5>
         <Components>
@@ -41,18 +43,22 @@ function Button({ toggleTheme }: toggleProps) {
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
-          vibrating button{" "}
+          Glow button effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <Glow />
+        </Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
-          happy button{" "}
+          Shutter button effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <Shutter />
+        </Components>
       </ComponentWrapper>
     </Container>
   );
