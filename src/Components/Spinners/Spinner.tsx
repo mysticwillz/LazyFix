@@ -9,6 +9,7 @@ import {
 import { theme } from "../../Theme";
 import BlockSpin from "./BlockSpin/BlockSpin";
 import Loading from "./Loading/Loading";
+import Whoop from "./Whoop/Whoop";
 
 interface toggleProps {
   toggleTheme: boolean;
@@ -33,7 +34,7 @@ function Spinner({ toggleTheme }: toggleProps) {
         color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
       >
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
-          Block Spin Spinner
+          Block Spin Spinner Effect
         </Title>
         <h5>View React source code</h5>
         <Components>
@@ -44,10 +45,12 @@ function Spinner({ toggleTheme }: toggleProps) {
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
-          Glow button effect
+          Whoop Spinner effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <Whoop />
+        </Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
