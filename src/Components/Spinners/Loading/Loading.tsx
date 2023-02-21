@@ -3,11 +3,10 @@ import "./loading.css";
 function Loading() {
   return (
     <main id="main">
-      <h4 className="heading">Hover to see effect</h4>
-      <div>
-        <button type="button" className="shine--button">
-          Shine
-        </button>
+      <div className="center">
+        <div className="loading--spinner">
+          <span>loading..</span>
+        </div>
       </div>
     </main>
   );
