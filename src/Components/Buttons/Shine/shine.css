@@ -22,38 +22,37 @@
   height: 100%;
 }
 
-.window--button {
+.shine--button {
   position: relative;
   border: none;
-  transition: 0.4s ease-in;
+  transition: 0.6s ease-out;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
-  width: 180px;
-  height: 55px;
-  background: #c7c7c7;
+  width: 160px;
+  height: 50px;
+  background: #c5d2e1;
   cursor: pointer;
-  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 6px;
 }
-.window--button:hover {
-  color: white;
-}
-
-.window--button::after {
+.shine--button::after {
   position: absolute;
   content: "";
   z-index: -1;
-  height: 0%;
-  left: 0%;
+  height: 100%;
+  left: -35%;
   top: 0%;
-  transition: 0.6s;
-  width: 100%;
-  background: #7a13ae;
-  border-radius: 5px;
+  transform: skew(50deg);
+  transition-duration: 0.6s;
+  transform-origin: top left;
+  width: 0;
+  background: #82a3c8;
 }
 
-.window--button:hover::after {
+.shine--button:hover:after {
   height: 100%;
+  width: 135%;
 }

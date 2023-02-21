@@ -1,16 +1,16 @@
 import React from "react";
-import "./window.css";
-function WindowClose() {
+import "./double.css";
+function Double() {
   return (
     <main id="main">
       <h4 className="heading">Hover to see effect</h4>
       <div>
-        <button type="button" className="window--button">
-          Close the window
+        <button type="button" className="double--button">
+          Move Left
         </button>
       </div>
     </main>
   );
 }
 
-export default WindowClose;
+export default Double;

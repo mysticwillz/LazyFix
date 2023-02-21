@@ -7,44 +7,37 @@ import {
   Components,
 } from "../../Reusables/Styles";
 import { theme } from "../../Theme";
-import Border from "./Border/Border";
-import Double from "./Double/Double";
-import Glow from "./Glow/Glow";
-import MoveLeft from "./MoveLeft/MoveLeft";
-import Shine from "./Shine/Shine";
-import Shutter from "./Shutter/Shutter";
-import Slide from "./Slide/Slide";
-import WindowClose from "./WindowClose/WindowClose";
+import BlockSpin from "./BlockSpin/BlockSpin";
+import Loading from "./Loading/Loading";
 
 interface toggleProps {
   toggleTheme: boolean;
 }
-function Button({ toggleTheme }: toggleProps) {
+function Spinner({ toggleTheme }: toggleProps) {
   return (
     <Container color={toggleTheme ? theme.home_text : theme.home_bg}>
       <Heading color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
         {" "}
-        Button Components
+        Spinner Components
       </Heading>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
-          slide button effect{" "}
+          Loading spinner effect
         </Title>
         <h5>View React source code</h5>
         <Components>
-          <Slide />
+          <Loading />
         </Components>
       </ComponentWrapper>
       <ComponentWrapper
         color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
       >
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
-          {" "}
-          Move Left Effect
+          Block Spin Spinner
         </Title>
         <h5>View React source code</h5>
         <Components>
-          <MoveLeft />
+          <BlockSpin />
         </Components>
       </ComponentWrapper>
 
@@ -54,9 +47,7 @@ function Button({ toggleTheme }: toggleProps) {
           Glow button effect
         </Title>
         <h5>View React source code</h5>
-        <Components>
-          <Glow />
-        </Components>
+        <Components></Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
@@ -64,9 +55,7 @@ function Button({ toggleTheme }: toggleProps) {
           Shutter button effect
         </Title>
         <h5>View React source code</h5>
-        <Components>
-          <Shutter />
-        </Components>
+        <Components></Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
@@ -74,9 +63,7 @@ function Button({ toggleTheme }: toggleProps) {
           Window Close button effect
         </Title>
         <h5>View React source code</h5>
-        <Components>
-          <WindowClose />
-        </Components>
+        <Components></Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
@@ -84,9 +71,7 @@ function Button({ toggleTheme }: toggleProps) {
           shine button effect
         </Title>
         <h5>View React source code</h5>
-        <Components>
-          <Shine />
-        </Components>
+        <Components></Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
@@ -94,9 +79,7 @@ function Button({ toggleTheme }: toggleProps) {
           Border button effect
         </Title>
         <h5>View React source code</h5>
-        <Components>
-          <Border />
-        </Components>
+        <Components></Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
@@ -104,12 +87,10 @@ function Button({ toggleTheme }: toggleProps) {
           Double button effect
         </Title>
         <h5>View React source code</h5>
-        <Components>
-          <Double />
-        </Components>
+        <Components></Components>
       </ComponentWrapper>
     </Container>
   );
 }
 
-export default Button;
+export default Spinner;
