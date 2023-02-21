@@ -7,6 +7,7 @@ import {
   Components,
 } from "../../Reusables/Styles";
 import { theme } from "../../Theme";
+import BlockSpin from "./BlockSpin/BlockSpin";
 import Loading from "./Loading/Loading";
 
 interface toggleProps {
@@ -21,7 +22,7 @@ function Spinner({ toggleTheme }: toggleProps) {
       </Heading>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
-          Loading spinner effect{" "}
+          Loading spinner effect
         </Title>
         <h5>View React source code</h5>
         <Components>
@@ -32,11 +33,12 @@ function Spinner({ toggleTheme }: toggleProps) {
         color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
       >
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
-          {" "}
-          Move Left Effect
+          Block Spin Spinner
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <BlockSpin />
+        </Components>
       </ComponentWrapper>
 
       <ComponentWrapper>
