@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { ButtonsPage, HomePage } from "./Pages";
+import { ButtonsPage, HomePage, SpinnersPage } from "./Pages";
 import "./index.css";
 import { ModeContext } from "./Context/ModeContext";
 import { useState } from "react";
@@ -14,6 +14,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/buttons" element={<ButtonsPage />} />
+        </Routes>
+        <Routes>
+          <Route path="/spinners" element={<SpinnersPage />} />
         </Routes>
       </ModeContext.Provider>
     </>
