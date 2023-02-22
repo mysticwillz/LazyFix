@@ -12,6 +12,7 @@ import CircleLoad from "./CircleLoad/CircleLoad";
 import Loading from "./Loading/Loading";
 import LoadText from "./LoadText/LoadText";
 import StringSpin from "./StringSpin/StringSpin";
+import ThickShade from "./ThickShade/ThickShade";
 import Whoop from "./Whoop/Whoop";
 
 interface toggleProps {
@@ -87,11 +88,12 @@ function Spinner({ toggleTheme }: toggleProps) {
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
-          {" "}
-          Border button effect
+          Thick shade spinner effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <ThickShade />
+        </Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
