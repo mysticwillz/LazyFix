@@ -10,6 +10,7 @@ import { theme } from "../../Theme";
 import BlockSpin from "./BlockSpin/BlockSpin";
 import CircleLoad from "./CircleLoad/CircleLoad";
 import Loading from "./Loading/Loading";
+import LoadText from "./LoadText/LoadText";
 import Whoop from "./Whoop/Whoop";
 
 interface toggleProps {
@@ -66,10 +67,12 @@ function Spinner({ toggleTheme }: toggleProps) {
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
-          Window Close button effect
+          load text spinner effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <LoadText />
+        </Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
