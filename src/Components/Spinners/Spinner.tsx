@@ -8,6 +8,7 @@ import {
 } from "../../Reusables/Styles";
 import { theme } from "../../Theme";
 import BlockSpin from "./BlockSpin/BlockSpin";
+import Bouncy from "./Bouncy/Bouncy";
 import CircleLoad from "./CircleLoad/CircleLoad";
 import Loading from "./Loading/Loading";
 import LoadText from "./LoadText/LoadText";
@@ -104,6 +105,16 @@ function Spinner({ toggleTheme }: toggleProps) {
         <h5>View React source code</h5>
         <Components>
           <Matrix />
+        </Components>
+      </ComponentWrapper>
+      <ComponentWrapper>
+        <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+          {" "}
+          bouncy spinner effect
+        </Title>
+        <h5>View React source code</h5>
+        <Components>
+          <Bouncy />
         </Components>
       </ComponentWrapper>
     </Container>
