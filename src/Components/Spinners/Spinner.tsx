@@ -11,6 +11,7 @@ import BlockSpin from "./BlockSpin/BlockSpin";
 import CircleLoad from "./CircleLoad/CircleLoad";
 import Loading from "./Loading/Loading";
 import LoadText from "./LoadText/LoadText";
+import Matrix from "./Matrix/Matrix";
 import StringSpin from "./StringSpin/StringSpin";
 import ThickShade from "./ThickShade/ThickShade";
 import Whoop from "./Whoop/Whoop";
@@ -98,10 +99,12 @@ function Spinner({ toggleTheme }: toggleProps) {
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
-          Double button effect
+          matrix spinner effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <Matrix />
+        </Components>
       </ComponentWrapper>
     </Container>
   );
