@@ -11,6 +11,7 @@ import BlockSpin from "./BlockSpin/BlockSpin";
 import CircleLoad from "./CircleLoad/CircleLoad";
 import Loading from "./Loading/Loading";
 import LoadText from "./LoadText/LoadText";
+import StringSpin from "./StringSpin/StringSpin";
 import Whoop from "./Whoop/Whoop";
 
 interface toggleProps {
@@ -77,10 +78,12 @@ function Spinner({ toggleTheme }: toggleProps) {
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
-          shine button effect
+          string spin spinner effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <StringSpin />
+        </Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
