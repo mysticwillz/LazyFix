@@ -1,6 +1,6 @@
 import React from "react";
-import "./outline.css";
-function Outline() {
+import "./glass.css";
+function Glass() {
   return (
     <main id="main">
       <h4 className="heading">Hover to see effect</h4>
@@ -11,4 +11,4 @@ function Outline() {
   );
 }
 
-export default Outline;
+export default Glass;

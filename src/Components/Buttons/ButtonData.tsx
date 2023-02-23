@@ -2,7 +2,8 @@ import Border from "./Border/Border";
 import Double from "./Double/Double";
 import Glow from "./Glow/Glow";
 import MoveLeft from "./MoveLeft/MoveLeft";
-import Outline from "./Outline/Outline";
+import Glass from "./Glass/Glass";
+
 import Shine from "./Shine/Shine";
 import Shutter from "./Shutter/Shutter";
 import Slide from "./Slide/Slide";
@@ -46,7 +47,7 @@ export const ButtonData: ButtonType[] = [
     button: <Double />,
   },
   {
-    title: " Outline button effect ",
-    button: <Outline />,
+    title: " Glass button effect ",
+    button: <Glass />,
   },
 ];
