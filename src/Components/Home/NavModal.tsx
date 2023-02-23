@@ -23,7 +23,8 @@ export default NavModal;
 const Container = styled.section`
   position: absolute;
   right: 50px;
-  top: 0;
+  top: 70px;
+  z-index: 40;
   width: 200px;
   height: 220px;
   border-radius: 15px;
