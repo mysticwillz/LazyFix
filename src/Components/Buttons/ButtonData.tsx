@@ -2,6 +2,7 @@ import Border from "./Border/Border";
 import Double from "./Double/Double";
 import Glow from "./Glow/Glow";
 import MoveLeft from "./MoveLeft/MoveLeft";
+import Outline from "./Outline/Outline";
 import Shine from "./Shine/Shine";
 import Shutter from "./Shutter/Shutter";
 import Slide from "./Slide/Slide";
@@ -43,5 +44,9 @@ export const ButtonData: ButtonType[] = [
   {
     title: " Double button effect ",
     button: <Double />,
+  },
+  {
+    title: " Outline button effect ",
+    button: <Outline />,
   },
 ];
