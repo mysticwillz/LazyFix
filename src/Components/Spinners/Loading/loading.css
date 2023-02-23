@@ -50,7 +50,7 @@
     box-shadow: 1px 3px 2px #0466c8;
   }
 }
-span {
+.loading--span {
   color: #737373;
   font-size: 16px;
   text-transform: uppercase;

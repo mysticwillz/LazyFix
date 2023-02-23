@@ -8,7 +8,15 @@ import {
 } from "../../Reusables/Styles";
 import { theme } from "../../Theme";
 import BlockSpin from "./BlockSpin/BlockSpin";
+import Bouncy from "./Bouncy/Bouncy";
+import CircleLoad from "./CircleLoad/CircleLoad";
 import Loading from "./Loading/Loading";
+import LoadText from "./LoadText/LoadText";
+import Matrix from "./Matrix/Matrix";
+import StringSpin from "./StringSpin/StringSpin";
+import ThickShade from "./ThickShade/ThickShade";
+import Whoop from "./Whoop/Whoop";
+import Zip from "./Zip/Zip";
 
 interface toggleProps {
   toggleTheme: boolean;
@@ -33,7 +41,7 @@ function Spinner({ toggleTheme }: toggleProps) {
         color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
       >
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
-          Block Spin Spinner
+          Block Spin Spinner Effect
         </Title>
         <h5>View React source code</h5>
         <Components>
@@ -44,50 +52,81 @@ function Spinner({ toggleTheme }: toggleProps) {
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
-          Glow button effect
+          Whoop Spinner effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <Whoop />
+        </Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
-          Shutter button effect
+          Circle load spinner effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <CircleLoad />
+        </Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
-          Window Close button effect
+          load text spinner effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <LoadText />
+        </Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
-          shine button effect
+          string spin spinner effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <StringSpin />
+        </Components>
+      </ComponentWrapper>
+      <ComponentWrapper>
+        <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+          Thick shade spinner effect
+        </Title>
+        <h5>View React source code</h5>
+        <Components>
+          <ThickShade />
+        </Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
-          Border button effect
+          matrix spinner effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <Matrix />
+        </Components>
       </ComponentWrapper>
       <ComponentWrapper>
         <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           {" "}
-          Double button effect
+          bouncy spinner effect
         </Title>
         <h5>View React source code</h5>
-        <Components></Components>
+        <Components>
+          <Bouncy />
+        </Components>
+      </ComponentWrapper>
+      <ComponentWrapper>
+        <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+          {" "}
+          zip spinner effect
+        </Title>
+        <h5>View React source code</h5>
+        <Components>
+          <Zip />
+        </Components>
       </ComponentWrapper>
     </Container>
   );
