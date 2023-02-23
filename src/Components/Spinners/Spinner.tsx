@@ -16,6 +16,7 @@ import Matrix from "./Matrix/Matrix";
 import StringSpin from "./StringSpin/StringSpin";
 import ThickShade from "./ThickShade/ThickShade";
 import Whoop from "./Whoop/Whoop";
+import Zip from "./Zip/Zip";
 
 interface toggleProps {
   toggleTheme: boolean;
@@ -115,6 +116,16 @@ function Spinner({ toggleTheme }: toggleProps) {
         <h5>View React source code</h5>
         <Components>
           <Bouncy />
+        </Components>
+      </ComponentWrapper>
+      <ComponentWrapper>
+        <Title color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+          {" "}
+          zip spinner effect
+        </Title>
+        <h5>View React source code</h5>
+        <Components>
+          <Zip />
         </Components>
       </ComponentWrapper>
     </Container>
