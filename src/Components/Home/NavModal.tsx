@@ -21,7 +21,7 @@ function NavModal({ toggleTheme }: ModeProps) {
 
 export default NavModal;
 const Container = styled.section`
-  position: absolute;
+  position: fixed;
   right: 50px;
   top: 70px;
   z-index: 40;

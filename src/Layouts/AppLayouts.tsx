@@ -8,17 +8,23 @@ import Sidebar from "../Components/Layouts/Sidebar";
 import Button from "../Components/Buttons/Button";
 import { ModeContext } from "../Context/ModeContext";
 import { theme } from "../Theme";
+import NavModal from "../Components/Home/NavModal";
 interface children {
   children: React.ReactNode;
 }
 function AppLayouts({ children }: children) {
   const { toggleTheme, setToggleTheme } = useContext(ModeContext);
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
     <>
       <MainContainer color={toggleTheme ? theme.home_text : theme.home_bg}>
-        <NavSection toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
-
+        <NavSection
+          toggleTheme={toggleTheme}
+          setToggleTheme={setToggleTheme}
+          showMenu={showMenu}
+          setShowMenu={setShowMenu}
+        />
         <Container color={toggleTheme ? theme.home_bg : theme.home_text}>
           <SidebarMobile toggleTheme={toggleTheme} showSidebar={showSidebar} />
           <Sidebar toggleTheme={toggleTheme} />
@@ -39,6 +45,7 @@ function AppLayouts({ children }: children) {
             />
           )}
         </Container>
+        {showMenu && <NavModal toggleTheme={toggleTheme} />}
       </MainContainer>
     </>
   );
