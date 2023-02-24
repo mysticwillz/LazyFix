@@ -8,37 +8,44 @@ import Sidebar from "../Components/Layouts/Sidebar";
 import Button from "../Components/Buttons/Button";
 import { ModeContext } from "../Context/ModeContext";
 import { theme } from "../Theme";
+import NavModal from "../Components/Home/NavModal";
 interface children {
   children: React.ReactNode;
 }
 function AppLayouts({ children }: children) {
   const { toggleTheme, setToggleTheme } = useContext(ModeContext);
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
     <>
       <MainContainer color={toggleTheme ? theme.home_text : theme.home_bg}>
-        <NavSection toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
-
+        <NavSection
+          toggleTheme={toggleTheme}
+          setToggleTheme={setToggleTheme}
+          showMenu={showMenu}
+          setShowMenu={setShowMenu}
+        />
         <Container color={toggleTheme ? theme.home_bg : theme.home_text}>
           <SidebarMobile toggleTheme={toggleTheme} showSidebar={showSidebar} />
           <Sidebar toggleTheme={toggleTheme} />
           {children}
+          {!showSidebar ? (
+            <HiMenu
+              onClick={() => {
+                setShowSidebar(!showSidebar);
+              }}
+              className="show--bar"
+            />
+          ) : (
+            <HiMenuAlt3
+              onClick={() => {
+                setShowSidebar(!showSidebar);
+              }}
+              className="show--bar"
+            />
+          )}
         </Container>
-        {!showSidebar ? (
-          <HiMenu
-            onClick={() => {
-              setShowSidebar(!showSidebar);
-            }}
-            className="show--bar"
-          />
-        ) : (
-          <HiMenuAlt3
-            onClick={() => {
-              setShowSidebar(!showSidebar);
-            }}
-            className="show--bar"
-          />
-        )}
+        {showMenu && <NavModal toggleTheme={toggleTheme} />}
       </MainContainer>
     </>
   );
@@ -59,13 +66,14 @@ const Container = styled.section`
   position: relative;
 
   .show--bar {
-    position: absolute;
-    right: 0px;
+    position: fixed;
+    right: 20px;
     bottom: 100px;
     width: 60px;
     height: 60px;
-    z-index: 15;
-    color: ${(props) => props.color};
+    z-index: 80;
+
+    color: ${theme.home_bg};
     @media (min-width: 768px) {
       display: none;
     }
