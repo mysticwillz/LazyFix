@@ -71,12 +71,12 @@ function SidebarMobile({ toggleTheme, showSidebar }: toggleProps) {
 export default SidebarMobile;
 const ContainerWrapper = styled.section`
   width: 70%;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
   left: 0;
-  top: 0;
+  top: 71px;
 
-  z-index: 2;
+  z-index: 1002;
   transform: ${(props) => props.color};
   flex-direction: column;
 
@@ -86,7 +86,6 @@ const ContainerWrapper = styled.section`
     display: none;
   }
 
-  border-right: 1px solid gray;
   h2 {
     font-size: 18px;
     line-height: 24px;
