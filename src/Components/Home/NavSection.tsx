@@ -52,22 +52,22 @@ function NavSection({
             <div className="line"></div>
             <AiFillGithub className="icons" />
             {!toggleTheme ? (
-              <div
-                onClick={() => {
-                  setToggleTheme(!toggleTheme);
-                }}
-                className="icons"
-              >
-                <MdLightMode className="icons" />
+              <div className="icons">
+                <MdLightMode
+                  className="icons"
+                  onClick={() => {
+                    setToggleTheme(!toggleTheme);
+                  }}
+                />
               </div>
             ) : (
-              <div
-                onClick={() => {
-                  setToggleTheme(!toggleTheme);
-                }}
-                className="icons"
-              >
-                <MdDarkMode className="icons" />
+              <div className="icons">
+                <MdDarkMode
+                  className="icons"
+                  onClick={() => {
+                    setToggleTheme(!toggleTheme);
+                  }}
+                />
               </div>
             )}
           </div>
@@ -178,7 +178,7 @@ const $Container = styled.nav`
   .icons {
     height: 30px;
     width: 30px;
-    padding-right: 15px;
+    margin-right: 15px;
     cursor: pointer;
   }
   .menu {

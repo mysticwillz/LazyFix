@@ -23,22 +23,22 @@ function AppLayouts({ children }: children) {
           <SidebarMobile toggleTheme={toggleTheme} showSidebar={showSidebar} />
           <Sidebar toggleTheme={toggleTheme} />
           {children}
+          {!showSidebar ? (
+            <HiMenu
+              onClick={() => {
+                setShowSidebar(!showSidebar);
+              }}
+              className="show--bar"
+            />
+          ) : (
+            <HiMenuAlt3
+              onClick={() => {
+                setShowSidebar(!showSidebar);
+              }}
+              className="show--bar"
+            />
+          )}
         </Container>
-        {!showSidebar ? (
-          <HiMenu
-            onClick={() => {
-              setShowSidebar(!showSidebar);
-            }}
-            className="show--bar"
-          />
-        ) : (
-          <HiMenuAlt3
-            onClick={() => {
-              setShowSidebar(!showSidebar);
-            }}
-            className="show--bar"
-          />
-        )}
       </MainContainer>
     </>
   );
@@ -59,13 +59,14 @@ const Container = styled.section`
   position: relative;
 
   .show--bar {
-    position: absolute;
-    right: 0px;
+    position: fixed;
+    right: 20px;
     bottom: 100px;
     width: 60px;
     height: 60px;
-    z-index: 15;
-    color: ${(props) => props.color};
+    z-index: 80;
+
+    color: ${theme.home_bg};
     @media (min-width: 768px) {
       display: none;
     }
