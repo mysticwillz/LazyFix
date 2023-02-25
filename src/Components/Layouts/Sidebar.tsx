@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../Theme";
 interface toggleProps {
@@ -6,6 +7,11 @@ interface toggleProps {
 }
 function Sidebar({ toggleTheme }: toggleProps) {
   const [searchInput, setSearchInput] = useState<string>("");
+
+  const sideNav: string[] = [" Buttons", "Spinners", "Forms", "Cards"];
+
+  const location = useLocation();
+
   return (
     <>
       <ContainerWrapper color={toggleTheme ? theme.home_text : theme.home_bg}>
@@ -31,16 +37,23 @@ function Sidebar({ toggleTheme }: toggleProps) {
               toggleTheme ? theme.app_text_light_big : theme.app_text_dark_big
             }
           >
-            <li>Buttons</li>
-            <li>Sliders</li>
-            <li>Navigation Bars</li>
-            <li>Loaders</li>
-            <li>Sidebar</li>
-            <li>How to use</li>
-            <li>Get started</li>
-            <li>How to use</li>
-            <li>Get started</li>
-            <li>How to use</li>
+            {sideNav.map((nav, index) => {
+              const filteredNav = sideNav.filter((bar) => {
+                let activeBar = `/${bar.toLowerCase().trim()}`;
+                return activeBar === location.pathname;
+              });
+              const activeNavBar = filteredNav[0].toLowerCase().trim();
+              const currentNavBar = nav.toLowerCase().trim();
+              return (
+                <List
+                  className={
+                    activeNavBar === currentNavBar ? "active--location" : ""
+                  }
+                >
+                  {nav}
+                </List>
+              );
+            })}
           </Components>
         </Container>
         <h2>Sponsors</h2>
@@ -69,14 +82,16 @@ const ContainerWrapper = styled.section`
   position: fixed;
   left: 0;
   top: 70px;
-
+  border-right: 1px solid gray;
   overflow-y: scroll;
   overflow-x: hidden;
 
   @media (min-width: 768px) {
     display: flex;
   }
-
+  .active--location {
+    color: #4361ee;
+  }
   border-right: 1px solid gray;
   h2 {
     font-size: 18px;
@@ -140,8 +155,6 @@ const GetStarted = styled.ul`
   display: flex;
   flex-direction: column;
 
-  color: ${(props) => props.color};
-
   li {
     font-size: 16px;
     line-height: 20px;
@@ -163,20 +176,21 @@ const Components = styled.ul`
   display: flex;
   flex-direction: column;
   color: ${(props) => props.color};
+`;
 
-  li {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: normal;
-    cursor: pointer;
-    list-style-type: none;
-    padding: 7px 20px;
-    border-left: 1px solid gray;
-    transition: all 0.3s ease;
-    &:hover {
-      border-left: 1px solid #4361ee;
-      color: #4361ee;
-    }
+const List = styled.li`
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  cursor: pointer;
+  list-style-type: none;
+  padding: 7px 20px;
+  border-left: 1px solid gray;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-left: 1px solid #4361ee;
+    color: #4361ee;
   }
 `;
 
