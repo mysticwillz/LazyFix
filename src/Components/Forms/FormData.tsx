@@ -1,4 +1,4 @@
-import Slide from "../Buttons/Slide/Slide";
+import PurpleLogin from "./PurpleLogin/PurpleLogin";
 
 interface FormType {
   title: string;
@@ -6,7 +6,7 @@ interface FormType {
 }
 export const FormData: FormType[] = [
   {
-    title: " slide button effect",
-    form: <Slide />,
+    title: " Login and register form",
+    form: <PurpleLogin />,
   },
 ];
