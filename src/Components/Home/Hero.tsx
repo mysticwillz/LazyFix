@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import HeroImage from "../../Assets/Hero.png";
 
@@ -15,6 +16,7 @@ interface Props {
 }
 
 function Hero({ toggleTheme, showMenu, setShowMenu }: Props) {
+  const navigate = useNavigate();
   return (
     <>
       <$OverallContainer>
@@ -28,7 +30,13 @@ function Hero({ toggleTheme, showMenu, setShowMenu }: Props) {
               Let us take care of the small web components, so you can focus on
               optimizing and executing quality code.
             </p>{" "}
-            <$HeroButton>Start Building Now</$HeroButton>
+            <$HeroButton
+              onClick={() => {
+                navigate("/buttons");
+              }}
+            >
+              Start Building Now
+            </$HeroButton>
             <p> Built by the creator of: </p>
             <Footer />
           </$HeroText>

@@ -1,19 +1,33 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../Theme";
 interface ModeProps {
   toggleTheme: boolean;
 }
 function NavModal({ toggleTheme }: ModeProps) {
+  const navigate = useNavigate();
   return (
     <>
       <Container color={toggleTheme ? theme.home_bg : theme.home_text}>
         <List color={toggleTheme ? theme.home_text : theme.home_bg}>
           <li>Docs</li>
-          <li>Components</li>
+          <li
+            onClick={() => {
+              navigate("/buttons");
+            }}
+          >
+            Components
+          </li>
           <li>Blog</li>
         </List>
-        <button>Get Started</button>
+        <button
+          onClick={() => {
+            navigate("/buttons");
+          }}
+        >
+          Get Started
+        </button>
       </Container>
     </>
   );
