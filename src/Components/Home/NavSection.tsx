@@ -6,6 +6,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import HeroImage from "../../Assets/Hero.png";
 import { HiMenu, HiMenuAlt3 } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   toggleTheme: boolean;
@@ -19,6 +20,7 @@ function NavSection({
   setShowMenu,
   showMenu,
 }: Props) {
+  const navigate = useNavigate();
   return (
     <>
       <$OverallContainer color={toggleTheme ? theme.home_text : theme.home_bg}>
@@ -29,11 +31,23 @@ function NavSection({
           <div className="nav_links">
             <ul>
               <li>Docs</li>
-              <li>Components</li>
+              <li
+                onClick={() => {
+                  navigate("/buttons");
+                }}
+              >
+                Components
+              </li>
               <li>Blog</li>
             </ul>
 
-            <button>Get Started</button>
+            <button
+              onClick={() => {
+                navigate("/buttons");
+              }}
+            >
+              Get Started
+            </button>
             {!showMenu ? (
               <HiMenu
                 onClick={() => {
