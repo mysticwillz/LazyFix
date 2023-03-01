@@ -3,6 +3,7 @@ import NewsLetter from "./NewsLetter/NewsLetter";
 import OtpForm from "./OTPForm/OtpForm";
 import PinkContactUs from "./PinkContactUs/PinkContactUs";
 import PurpleLogin from "./PurpleLogin/PurpleLogin";
+import RadiusSignup from "./RadiusSignup/RadiusSignup";
 
 interface FormType {
   title: string;
@@ -28,5 +29,9 @@ export const FormData: FormType[] = [
   {
     title: " Newsletter form",
     form: <NewsLetter />,
+  },
+  {
+    title: "Login form",
+    form: <RadiusSignup />,
   },
 ];
