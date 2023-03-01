@@ -1,4 +1,5 @@
 import BlackLogin from "./BlackLogin/BlackLogin";
+import ChatForm from "./ChatForm/ChatForm";
 import NewsLetter from "./NewsLetter/NewsLetter";
 import OtpForm from "./OTPForm/OtpForm";
 import PinkContactUs from "./PinkContactUs/PinkContactUs";
@@ -33,5 +34,9 @@ export const FormData: FormType[] = [
   {
     title: "Login form",
     form: <RadiusSignup />,
+  },
+  {
+    title: "Chat App form",
+    form: <ChatForm />,
   },
 ];
