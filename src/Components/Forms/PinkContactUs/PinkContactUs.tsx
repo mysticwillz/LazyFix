@@ -4,7 +4,7 @@ export default function PinkContactUs() {
   return (
     <main id="pink--contact--us--main">
       <div className="contact-form">
-        <span className="heading">Contact Us</span>
+        <span className="pink--contact--us--heading">Contact Us</span>
         <form>
           <label htmlFor="name">Name:</label>
           <input type="text" />
