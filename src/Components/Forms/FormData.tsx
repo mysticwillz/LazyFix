@@ -1,3 +1,4 @@
+import BlackLogin from "./BlackLogin/BlackLogin";
 import PinkContactUs from "./PinkContactUs/PinkContactUs";
 import PurpleLogin from "./PurpleLogin/PurpleLogin";
 
@@ -13,5 +14,9 @@ export const FormData: FormType[] = [
   {
     title: " Contact us form",
     form: <PinkContactUs />,
+  },
+  {
+    title: " Login form",
+    form: <BlackLogin />,
   },
 ];
