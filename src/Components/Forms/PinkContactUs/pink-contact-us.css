@@ -16,12 +16,13 @@
   color: black;
 }
 
-.contact-form .heading {
-  font-size: 12px;
+.contact-form .pink--contact--us--heading {
+  font-size: 16px;
   color: black;
-  margin-bottom: 7px;
+  margin-bottom: 2px;
   font-weight: bold;
   display: block;
+  text-align: center;
 }
 
 .contact-form form {
@@ -31,7 +32,7 @@
 
 .contact-form label {
   margin-bottom: 2px;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 textarea {
@@ -76,14 +77,15 @@ textarea {
     background-color: #ecdede;
     padding: 20px;
     border-radius: 10px;
-    height: 85%;
+    height: auto;
   }
-  .contact-form .heading {
-    font-size: 24px;
+  .contact-form .pink--contact--us--heading {
+    font-size: 30px;
     color: black;
     margin-bottom: 12px;
     font-weight: bold;
     display: block;
+    text-align: center;
   }
   textarea {
     resize: none;
@@ -92,7 +94,7 @@ textarea {
   }
   .contact-form label {
     margin-bottom: 7px;
-    font-size: 30px;
+    font-size: 24px;
   }
   .contact-form input,
   .contact-form textarea {

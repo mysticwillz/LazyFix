@@ -1,5 +1,10 @@
+import BlackLogin from "./BlackLogin/BlackLogin";
+import ChatForm from "./ChatForm/ChatForm";
+import NewsLetter from "./NewsLetter/NewsLetter";
+import OtpForm from "./OTPForm/OtpForm";
 import PinkContactUs from "./PinkContactUs/PinkContactUs";
 import PurpleLogin from "./PurpleLogin/PurpleLogin";
+import RadiusSignup from "./RadiusSignup/RadiusSignup";
 
 interface FormType {
   title: string;
@@ -13,5 +18,25 @@ export const FormData: FormType[] = [
   {
     title: " Contact us form",
     form: <PinkContactUs />,
+  },
+  {
+    title: " Login form",
+    form: <BlackLogin />,
+  },
+  {
+    title: " OTP Verification form",
+    form: <OtpForm />,
+  },
+  {
+    title: " Newsletter form",
+    form: <NewsLetter />,
+  },
+  {
+    title: "Login form",
+    form: <RadiusSignup />,
+  },
+  {
+    title: "Chat App form",
+    form: <ChatForm />,
   },
 ];
