@@ -1,4 +1,5 @@
 import BlackLogin from "./BlackLogin/BlackLogin";
+import OtpForm from "./OTPForm/OtpForm";
 import PinkContactUs from "./PinkContactUs/PinkContactUs";
 import PurpleLogin from "./PurpleLogin/PurpleLogin";
 
@@ -18,5 +19,9 @@ export const FormData: FormType[] = [
   {
     title: " Login form",
     form: <BlackLogin />,
+  },
+  {
+    title: " OTP Verification form",
+    form: <OtpForm />,
   },
 ];
