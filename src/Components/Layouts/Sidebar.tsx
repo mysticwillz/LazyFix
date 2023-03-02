@@ -8,7 +8,7 @@ interface toggleProps {
 function Sidebar({ toggleTheme }: toggleProps) {
   const [searchInput, setSearchInput] = useState<string>("");
 
-  const sideNav: string[] = [" Buttons", "Spinners", "Forms", "Cards"];
+  const sideNav: string[] = [" Buttons", "Spinners", "Forms", "Cards", "Navs"];
 
   const location = useLocation();
 

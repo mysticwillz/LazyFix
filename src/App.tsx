@@ -1,5 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import { ButtonsPage, FormsPage, HomePage, SpinnersPage } from "./Pages";
+import {
+  ButtonsPage,
+  FormsPage,
+  HomePage,
+  NavsPage,
+  SpinnersPage,
+} from "./Pages";
 import "./index.css";
 import { ModeContext } from "./Context/ModeContext";
 import { useState } from "react";
@@ -20,6 +26,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/forms" element={<FormsPage />} />
+        </Routes>
+        <Routes>
+          <Route path="/navs" element={<NavsPage />} />
         </Routes>
       </ModeContext.Provider>
     </>
