@@ -7,12 +7,13 @@ import {
   Components,
 } from "../../Reusables/Styles";
 import { theme } from "../../Theme";
-import { FormData } from "./FormData";
+
+import { NavData } from "./NavData";
 
 interface toggleProps {
   toggleTheme: boolean;
 }
-function Form({ toggleTheme }: toggleProps) {
+function Nav({ toggleTheme }: toggleProps) {
   return (
     <Container color={toggleTheme ? theme.home_text : theme.home_bg}>
       <Heading color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
@@ -20,9 +21,9 @@ function Form({ toggleTheme }: toggleProps) {
         Form Components
       </Heading>
       <>
-        {FormData.length > 0 &&
-          FormData?.map((forms) => {
-            const { title, form } = forms;
+        {NavData.length > 0 &&
+          NavData?.map((navs) => {
+            const { title, nav } = navs;
 
             return (
               <ComponentWrapper
@@ -35,7 +36,7 @@ function Form({ toggleTheme }: toggleProps) {
                   {title}
                 </Title>
                 <h5>View React source code</h5>
-                <Components>{form}</Components>
+                <Components>{nav}</Components>
               </ComponentWrapper>
             );
           })}
@@ -44,4 +45,4 @@ function Form({ toggleTheme }: toggleProps) {
   );
 }
 
-export default Form;
+export default Nav;
