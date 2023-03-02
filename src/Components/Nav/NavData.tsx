@@ -1,5 +1,5 @@
-import NewsLetter from "../Forms/NewsLetter/NewsLetter";
 import LinksFirst from "./LinksFirst/LinksFirst";
+import LinksLast from "./LinksLast/LinksLast";
 
 interface NavType {
   title: string;
@@ -7,7 +7,11 @@ interface NavType {
 }
 export const NavData: NavType[] = [
   {
-    title: " Link first navigation",
+    title: " Links first navigation",
     nav: <LinksFirst />,
+  },
+  {
+    title: " Links last navigation",
+    nav: <LinksLast />,
   },
 ];
