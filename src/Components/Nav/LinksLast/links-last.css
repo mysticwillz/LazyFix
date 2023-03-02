@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;1,300;1,500&display=swap");
 
-#link--first--main {
+#link--last--main {
   width: 100%;
   height: 100%;
   display: flex;
@@ -9,7 +9,7 @@
   font-family: "Kanit", sans-serif;
 }
 
-.link--first--header {
+.link--last--header {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -20,26 +20,27 @@
   padding: 0 30px;
 }
 
-.link--first--logo {
+.link--last--logo {
   color: rgb(26, 85, 85);
   font-size: 1.5rem;
 }
-.link--first--logo span {
+.link--last--logo span {
   color: rgb(71, 178, 178);
   font-size: 1.6rem;
 }
-.link--first--nav {
+.link--last--nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  width: 100%;
 }
 
-.link--first--links {
+.link--last--links {
   list-style-type: none;
   margin-right: 10px;
 }
 
-.link--first--links li {
+.link--last--links li {
   display: inline-block;
   padding: 0 10px;
   color: rgb(39, 85, 85);
@@ -47,14 +48,14 @@
   transition: all 0.3s ease;
 }
 
-.link--first--links li:hover {
+.link--last--links li:hover {
   color: rgb(67, 146, 146);
 }
-.link--first--cta {
+.link--last--cta {
   text-decoration: none;
 }
 
-.link--first--cta button {
+.link--last--cta button {
   color: white;
   position: relative;
   border: none;
@@ -71,7 +72,7 @@
   overflow: hidden;
   border-radius: 6px;
 }
-.link--first--cta button::after {
+.link--last--cta button::after {
   position: absolute;
   content: "";
   z-index: -1;
@@ -85,13 +86,13 @@
   background: rgb(71, 178, 178);
 }
 
-.link--first--cta button:hover:after {
+.link--last--cta button:hover:after {
   height: 100%;
   width: 135%;
 }
 
 @media (min-width: 768px) {
-  .link--first--header {
+  .link--last--header {
     display: flex;
     justify-content: space-between;
     align-items: center;
