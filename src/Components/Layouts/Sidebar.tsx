@@ -8,7 +8,13 @@ interface toggleProps {
 function Sidebar({ toggleTheme }: toggleProps) {
   const [searchInput, setSearchInput] = useState<string>("");
 
-  const sideNav: string[] = [" Buttons", "Spinners", "Forms", "Cards", "Navigations"];
+  const sideNav: string[] = [
+    " Buttons",
+    "Spinners",
+    "Forms",
+    "Cards",
+    "Navigations",
+  ];
 
   const location = useLocation();
 
@@ -90,7 +96,9 @@ const ContainerWrapper = styled.section`
     display: flex;
   }
   .active--location {
-    color: #4361ee;
+    background-color: #4361ee;
+    color: white;
+    border: 1.5px solid #4361ee;
   }
   border-right: 1px solid gray;
   h2 {
@@ -126,7 +134,7 @@ const Container = styled.div`
   flex-direction: column;
 
   input {
-    width: 100%;
+    width: 95%;
     height: 40px;
     outline: none;
     background-color: #2d9ef54f;
@@ -162,11 +170,13 @@ const GetStarted = styled.ul`
     cursor: pointer;
     list-style-type: none;
     padding: 7px 20px;
-    border-left: 1px solid gray;
+    border: 1.5px solid gray;
+    border-radius: 0 10px 10px 0;
+    text-align: center;
+    margin-bottom: 10px;
     transition: all 0.3s ease;
     &:hover {
-      border-left: 1px solid #4361ee;
-      color: #4361ee;
+      border: 1.5px solid #4361ee;
     }
   }
 `;
@@ -185,12 +195,14 @@ const List = styled.li`
   cursor: pointer;
   list-style-type: none;
   padding: 7px 20px;
-  border-left: 1px solid gray;
+  border: 1.5px solid gray;
+  border-radius: 0 10px 10px 0;
+  margin-bottom: 10px;
+  text-align: center;
   transition: all 0.3s ease;
 
   &:hover {
-    border-left: 1px solid #4361ee;
-    color: #4361ee;
+    border: 1.5px solid #4361ee;
   }
 `;
 
