@@ -1,0 +1,142 @@
+#neophorm--main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.neophorm--container {
+  cursor: pointer;
+  background-color: white;
+  height: 220px;
+  max-height: 600px;
+  width: 250px;
+  border: none;
+  outline: none;
+  appearance: none;
+  border-radius: 10px;
+  padding: 10px 0px;
+  display: grid;
+  place-items: center;
+  transition: all 0.5s ease-in-out;
+  box-shadow: -28px 27px 20px rgba(80, 68, 68, 0.2),
+    10px -19px 37px rgba(255, 255, 255, 0.6),
+    inset 3px -3px 8px rgba(54, 49, 49, 0.6),
+    inset -5px 5px 12px rgba(255, 255, 255, 0.6);
+}
+
+.neophorm--container:hover {
+  transform: rotateX(20deg);
+}
+
+/*! .container content  */
+
+.neophorm--img {
+  border-radius: 100px;
+  filter: brightness(150%);
+  height: 80px;
+  width: 80px;
+  box-shadow: -5px 5px 5px rgba(80, 68, 68, 0.2),
+    5px -5px 5px rgba(80, 68, 68, 0.2);
+}
+
+.neophorm--name {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  text-shadow: 2px -2px 2px rgba(80, 68, 68, 0.2);
+}
+.neophorm--para {
+  padding: 0% 20px;
+}
+
+.color {
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 20px;
+  align-items: center;
+  width: 100%;
+  text-shadow: 2px -2px 2px rgba(80, 68, 68, 0.2);
+  margin: 0;
+}
+.color p {
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+.neophorm--color div i {
+  font-size: 1rem;
+  margin: 0% 10px;
+}
+#neophorm--mac-one {
+  color: rgba(15, 15, 63, 0.658);
+}
+
+.neophorm--price {
+  font-weight: bolder;
+  text-align: center;
+}
+
+.price-container div {
+  display: flex;
+  flex-direction: space-evenly;
+  align-items: center;
+  font-weight: bolder;
+}
+.item-count {
+  margin: 0% 15px;
+  font-weight: bolder;
+}
+
+/* ! button style */
+
+.neophorm--button {
+  cursor: pointer;
+  width: 80%;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(15, 15, 63);
+  margin-bottom: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.neophorm--button:hover {
+  background-color: rgb(157, 157, 163);
+  color: rgb(15, 15, 63);
+  font-weight: bold;
+  width: 82%;
+}
+
+@media (min-width: 768px) {
+  .neophorm--container {
+    cursor: pointer;
+    background-color: white;
+    height: 400px;
+    max-height: 600px;
+    width: 250px;
+    border: none;
+    outline: none;
+    appearance: none;
+    border-radius: 10px;
+    padding: 10px 0px;
+    display: grid;
+    place-items: center;
+    transition: all 0.5s ease-in-out;
+    box-shadow: -28px 27px 20px rgba(80, 68, 68, 0.2),
+      10px -19px 37px rgba(255, 255, 255, 0.6),
+      inset 3px -3px 8px rgba(54, 49, 49, 0.6),
+      inset -5px 5px 12px rgba(255, 255, 255, 0.6);
+  }
+  .neophorm--img {
+    border-radius: 100px;
+    filter: brightness(150%);
+    height: 200px;
+    width: 200px;
+    box-shadow: -5px 5px 5px rgba(80, 68, 68, 0.2),
+      5px -5px 5px rgba(80, 68, 68, 0.2);
+  }
+}

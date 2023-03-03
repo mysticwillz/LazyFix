@@ -1,5 +1,5 @@
-import PurpleLogin from "../Forms/PurpleLogin/PurpleLogin";
-
+import AppleCard from "./AppleCard/AppleCard";
+import Neophorm from "./NeoPhorm/Neophorm";
 
 interface CardType {
   title: string;
@@ -7,7 +7,11 @@ interface CardType {
 }
 export const CardData: CardType[] = [
   {
-    title: " Login and register card",
-    card : <PurpleLogin />,
+    title: "Apple card",
+    card: <AppleCard />,
+  },
+  {
+    title: "Neophorm card",
+    card: <Neophorm />,
   },
 ];
