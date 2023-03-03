@@ -28,7 +28,7 @@ function App() {
           <Route path="/forms" element={<FormsPage />} />
         </Routes>
         <Routes>
-          <Route path="/navs" element={<NavsPage />} />
+          <Route path="/navigations" element={<NavsPage />} />
         </Routes>
       </ModeContext.Provider>
     </>
