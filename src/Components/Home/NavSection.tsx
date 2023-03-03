@@ -212,7 +212,7 @@ const $LogoContainer = styled.h1`
   font-family: "Kanit", sans-serif;
 
   span {
-    color: #223bac;
+    color: #4361ee;
     font-size: 2rem;
     font-family: "Kanit", sans-serif;
   }
