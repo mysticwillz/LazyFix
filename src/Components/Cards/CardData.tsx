@@ -1,5 +1,4 @@
-import PurpleLogin from "../Forms/PurpleLogin/PurpleLogin";
-
+import AppleCard from "./AppleCard/AppleCard";
 
 interface CardType {
   title: string;
@@ -7,7 +6,7 @@ interface CardType {
 }
 export const CardData: CardType[] = [
   {
-    title: " Login and register card",
-    card : <PurpleLogin />,
+    title: "Apple card",
+    card: <AppleCard />,
   },
 ];
