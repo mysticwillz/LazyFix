@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { theme } from "../../Theme";
 import { AiFillGithub } from "react-icons/ai";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
-import HeroImage from "../../Assets/Hero.png";
+
 import { HiMenu, HiMenuAlt3 } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 
@@ -25,8 +25,8 @@ function NavSection({
     <>
       <$OverallContainer color={toggleTheme ? theme.home_text : theme.home_bg}>
         <$Container color={toggleTheme ? theme.home_bg : theme.home_text}>
-          <$LogoContainer>
-            <img src={HeroImage} alt="logo" />
+          <$LogoContainer color={toggleTheme ? theme.home_bg : theme.home_text}>
+            Lazy<span>Fix</span>
           </$LogoContainer>
           <div className="nav_links">
             <ul>
@@ -205,20 +205,15 @@ const $Container = styled.nav`
     }
   }
 `;
-const $LogoContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  height: 40px;
+const $LogoContainer = styled.h1`
+  color: ${(props) => props.color};
+  font-size: 1.9rem;
+  font-weight: 900;
+  font-family: "Kanit", sans-serif;
 
-  @media (min-width: 768px) {
-    width: 150px;
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    margin: 0 10px;
+  span {
+    color: #4361ee;
+    font-size: 2rem;
+    font-family: "Kanit", sans-serif;
   }
 `;

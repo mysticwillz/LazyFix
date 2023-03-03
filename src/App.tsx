@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import {
   ButtonsPage,
+  CardsPage,
   FormsPage,
   HomePage,
   NavsPage,
@@ -28,7 +29,10 @@ function App() {
           <Route path="/forms" element={<FormsPage />} />
         </Routes>
         <Routes>
-          <Route path="/navs" element={<NavsPage />} />
+          <Route path="/cards" element={<CardsPage />} />
+        </Routes>
+        <Routes>
+          <Route path="/navigations" element={<NavsPage />} />
         </Routes>
       </ModeContext.Provider>
     </>
