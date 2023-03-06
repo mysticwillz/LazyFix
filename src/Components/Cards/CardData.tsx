@@ -2,6 +2,7 @@ import AppleCard from "./AppleCard/AppleCard";
 import ContactCard from "./ContactCard/ContactCard";
 import FlipCard from "./FlipCard/FlipCard";
 import Neophorm from "./NeoPhorm/Neophorm";
+import Premium from "./Premium/Premium";
 import ProductCard from "./ProductCard/ProductCard";
 
 interface CardType {
@@ -28,5 +29,9 @@ export const CardData: CardType[] = [
   {
     title: "Flip card",
     card: <FlipCard />,
+  },
+  {
+    title: "Premium card",
+    card: <Premium />,
   },
 ];
