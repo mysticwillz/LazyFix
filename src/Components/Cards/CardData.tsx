@@ -1,5 +1,6 @@
 import AppleCard from "./AppleCard/AppleCard";
 import Neophorm from "./NeoPhorm/Neophorm";
+import ProductCard from "./ProductCard/ProductCard";
 
 interface CardType {
   title: string;
@@ -13,5 +14,9 @@ export const CardData: CardType[] = [
   {
     title: "Neophorm card",
     card: <Neophorm />,
+  },
+  {
+    title: "Product card",
+    card: <ProductCard />,
   },
 ];
