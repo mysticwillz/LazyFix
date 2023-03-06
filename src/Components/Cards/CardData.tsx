@@ -1,4 +1,5 @@
 import AppleCard from "./AppleCard/AppleCard";
+import ContactCard from "./ContactCard/ContactCard";
 import Neophorm from "./NeoPhorm/Neophorm";
 import ProductCard from "./ProductCard/ProductCard";
 
@@ -18,5 +19,9 @@ export const CardData: CardType[] = [
   {
     title: "Product card",
     card: <ProductCard />,
+  },
+  {
+    title: "Contact card",
+    card: <ContactCard />,
   },
 ];
