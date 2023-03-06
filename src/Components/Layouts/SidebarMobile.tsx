@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../Theme";
 
@@ -6,14 +7,27 @@ interface toggleProps {
   toggleTheme: boolean;
   showSidebar: boolean;
 }
-interface Props {
-  onPress: any;
-  src: any;
-  transform: string;
-  background: string;
+interface sideProps {
+  bars: string;
+  link: string;
 }
 function SidebarMobile({ toggleTheme, showSidebar }: toggleProps) {
   const [searchInput, setSearchInput] = useState<string>("");
+
+  const documentation: sideProps[] = [
+    { bars: " Get started", link: "/get-started" },
+    { bars: "How to use", link: "/how-to-use" },
+  ];
+  const sideNav: sideProps[] = [
+    { bars: " Buttons", link: "/buttons" },
+    { bars: "Spinners", link: "/spinners" },
+    { bars: "Forms", link: "/forms" },
+    { bars: "Cards", link: "/cards" },
+    { bars: "Navigations", link: "/navigations" },
+  ];
+
+  const location = useLocation();
+  const navigate = useNavigate();
   return (
     <>
       <ContainerWrapper
@@ -33,8 +47,22 @@ function SidebarMobile({ toggleTheme, showSidebar }: toggleProps) {
                 toggleTheme ? theme.app_text_light_big : theme.app_text_dark_big
               }
             >
-              <li>Get started</li>
-              <li>How to use</li>
+              {documentation.map((nav) => {
+                const { bars, link } = nav;
+
+                return (
+                  <List
+                    onClick={() => {
+                      navigate(link);
+                    }}
+                    className={
+                      link === location.pathname ? "active--location" : ""
+                    }
+                  >
+                    {bars}
+                  </List>
+                );
+              })}
             </GetStarted>
             <h2>Components</h2>
             <Components
@@ -42,20 +70,28 @@ function SidebarMobile({ toggleTheme, showSidebar }: toggleProps) {
                 toggleTheme ? theme.app_text_light_big : theme.app_text_dark_big
               }
             >
-              <li>Buttons</li>
-              <li>Sliders</li>
-              <li>Navigation Bars</li>
-              <li>Loaders</li>
-              <li>Sidebar</li>
-              <li>How to use</li>
-              <li>Get started</li>
-              <li>How to use</li>
-              <li>Get started</li>
-              <li>How to use</li>
+              {sideNav.map((nav) => {
+                const { bars, link } = nav;
+
+                return (
+                  <List
+                    onClick={() => {
+                      navigate(link);
+                    }}
+                    className={
+                      link === location.pathname ? "active--location" : ""
+                    }
+                  >
+                    {bars}
+                  </List>
+                );
+              })}
             </Components>
           </Container>
           <h2>Sponsors</h2>
           <SponsorsContainer>
+            <div></div>
+            <div></div>
             <div></div>
             <div></div>
             <div></div>
@@ -75,17 +111,16 @@ const ContainerWrapper = styled.section`
   position: fixed;
   left: 0;
   top: 71px;
+  overflow-y: auto;
 
   z-index: 1002;
   transform: ${(props) => props.color};
   flex-direction: column;
 
   transition: all 0.3s ease-in;
-
   @media (min-width: 768px) {
     display: none;
   }
-
   h2 {
     font-size: 18px;
     line-height: 24px;
@@ -94,24 +129,6 @@ const ContainerWrapper = styled.section`
     margin: 10px 0;
     padding-left: 10px;
   }
-
-  /* ::-webkit-scrollbar {
-    width: 10px;
-  }
- Track 
-  &::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-  /* Handle 
-  &::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-
-  /* Handle on hover 
-  &::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  } */
 `;
 const Wrapper = styled.div`
   width: 100%;
@@ -119,6 +136,7 @@ const Wrapper = styled.div`
   background: ${(props) => props.color};
   margin: 0;
   padding: 0;
+  overflow-y: auto;
 `;
 
 const Container = styled.div`
@@ -139,7 +157,7 @@ const Container = styled.div`
     line-height: 24px;
     font-weight: medium;
     padding: 0 10px;
-    margin: 40px 10px 30px;
+    margin: 20px 10px 15px;
 
     &:focus {
       background-color: white;
@@ -153,13 +171,12 @@ const Container = styled.div`
     padding-left: 10px;
   }
 `;
-
 const GetStarted = styled.ul`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-left: 10px;
   color: ${(props) => props.color};
+  padding-left: 10px;
 
   li {
     font-size: 16px;
@@ -168,11 +185,13 @@ const GetStarted = styled.ul`
     cursor: pointer;
     list-style-type: none;
     padding: 7px 20px;
-    border-left: 1px solid gray;
+    border: 1.5px solid gray;
+    border-radius: 0 10px 10px 0;
+    text-align: center;
+    margin-bottom: 10px;
     transition: all 0.3s ease;
     &:hover {
-      border-left: 1px solid #4361ee;
-      color: #4361ee;
+      border: 1.5px solid #4361ee;
     }
   }
 `;
@@ -183,19 +202,23 @@ const Components = styled.ul`
   flex-direction: column;
   color: ${(props) => props.color};
   padding-left: 10px;
-  li {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: normal;
-    cursor: pointer;
-    list-style-type: none;
-    padding: 7px 20px;
-    border-left: 1px solid gray;
-    transition: all 0.3s ease;
-    &:hover {
-      border-left: 1px solid #4361ee;
-      color: #4361ee;
-    }
+`;
+
+const List = styled.li`
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  cursor: pointer;
+  list-style-type: none;
+  padding: 7px 20px;
+  border: 1.5px solid gray;
+  border-radius: 0 10px 10px 0;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border: 1.5px solid #4361ee;
   }
 `;
 

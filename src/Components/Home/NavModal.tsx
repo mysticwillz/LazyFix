@@ -11,7 +11,13 @@ function NavModal({ toggleTheme }: ModeProps) {
     <>
       <Container color={toggleTheme ? theme.home_bg : theme.home_text}>
         <List color={toggleTheme ? theme.home_text : theme.home_bg}>
-          <li>Docs</li>
+          <li
+            onClick={() => {
+              navigate("/get-started");
+            }}
+          >
+            Docs
+          </li>
           <li
             onClick={() => {
               navigate("/buttons");
@@ -19,7 +25,13 @@ function NavModal({ toggleTheme }: ModeProps) {
           >
             Components
           </li>
-          <li>Blog</li>
+          <li
+            onClick={() => {
+              navigate("/blog");
+            }}
+          >
+            Blog
+          </li>
         </List>
         <button
           onClick={() => {

@@ -3,7 +3,9 @@ import {
   ButtonsPage,
   CardsPage,
   FormsPage,
+  GetStartedPagePage,
   HomePage,
+  HowToUsePage,
   NavsPage,
   SpinnersPage,
 } from "./Pages";
@@ -18,20 +20,12 @@ function App() {
       <ModeContext.Provider value={{ toggleTheme, setToggleTheme }}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-        </Routes>
-        <Routes>
+          <Route path="/get-started" element={<GetStartedPagePage />} />
+          <Route path="/how-to-use" element={<HowToUsePage />} />
           <Route path="/buttons" element={<ButtonsPage />} />
-        </Routes>
-        <Routes>
           <Route path="/spinners" element={<SpinnersPage />} />
-        </Routes>
-        <Routes>
           <Route path="/forms" element={<FormsPage />} />
-        </Routes>
-        <Routes>
           <Route path="/cards" element={<CardsPage />} />
-        </Routes>
-        <Routes>
           <Route path="/navigations" element={<NavsPage />} />
         </Routes>
       </ModeContext.Provider>
