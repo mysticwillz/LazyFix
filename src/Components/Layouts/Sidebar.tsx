@@ -1,23 +1,31 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../Theme";
 interface toggleProps {
   toggleTheme: boolean;
 }
+interface sideProps {
+  bars: string;
+  link: string;
+}
 function Sidebar({ toggleTheme }: toggleProps) {
   const [searchInput, setSearchInput] = useState<string>("");
 
-  const sideNav: string[] = [
-    " Buttons",
-    "Spinners",
-    "Forms",
-    "Cards",
-    "Navigations",
+  const documentation: sideProps[] = [
+    { bars: " Get started", link: "/get-started" },
+    { bars: "How to use", link: "/how-to-use" },
+  ];
+  const sideNav: sideProps[] = [
+    { bars: " Buttons", link: "/buttons" },
+    { bars: "Spinners", link: "/spinners" },
+    { bars: "Forms", link: "/forms" },
+    { bars: "Cards", link: "/cards" },
+    { bars: "Navigations", link: "/navigations" },
   ];
 
   const location = useLocation();
-
+  const navigate = useNavigate();
   return (
     <>
       <ContainerWrapper color={toggleTheme ? theme.home_text : theme.home_bg}>
@@ -34,8 +42,22 @@ function Sidebar({ toggleTheme }: toggleProps) {
               toggleTheme ? theme.app_text_light_big : theme.app_text_dark_big
             }
           >
-            <li>Get started</li>
-            <li>How to use</li>
+            {documentation.map((nav) => {
+              const { bars, link } = nav;
+
+              return (
+                <List
+                  onClick={() => {
+                    navigate(link);
+                  }}
+                  className={
+                    link === location.pathname ? "active--location" : ""
+                  }
+                >
+                  {bars}
+                </List>
+              );
+            })}
           </GetStarted>
           <h2>Components</h2>
           <Components
@@ -43,20 +65,19 @@ function Sidebar({ toggleTheme }: toggleProps) {
               toggleTheme ? theme.app_text_light_big : theme.app_text_dark_big
             }
           >
-            {sideNav.map((nav, index) => {
-              const filteredNav = sideNav.filter((bar) => {
-                let activeBar = `/${bar.toLowerCase().trim()}`;
-                return activeBar === location.pathname;
-              });
-              const activeNavBar = filteredNav[0].toLowerCase().trim();
-              const currentNavBar = nav.toLowerCase().trim();
+            {sideNav.map((nav) => {
+              const { bars, link } = nav;
+
               return (
                 <List
+                  onClick={() => {
+                    navigate(link);
+                  }}
                   className={
-                    activeNavBar === currentNavBar ? "active--location" : ""
+                    link === location.pathname ? "active--location" : ""
                   }
                 >
-                  {nav}
+                  {bars}
                 </List>
               );
             })}
@@ -162,6 +183,7 @@ const GetStarted = styled.ul`
   width: 100%;
   display: flex;
   flex-direction: column;
+  color: ${(props) => props.color};
 
   li {
     font-size: 16px;
