@@ -17,7 +17,7 @@ function Card({ toggleTheme }: toggleProps) {
     <Container color={toggleTheme ? theme.home_text : theme.home_bg}>
       <Heading color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
         {" "}
-        Form Components
+        Card Components
       </Heading>
       <>
         {CardData.length > 0 &&
