@@ -25,12 +25,23 @@ function NavSection({
     <>
       <$OverallContainer color={toggleTheme ? theme.home_text : theme.home_bg}>
         <$Container color={toggleTheme ? theme.home_bg : theme.home_text}>
-          <$LogoContainer color={toggleTheme ? theme.home_bg : theme.home_text}>
+          <$LogoContainer
+            onClick={() => {
+              navigate("/");
+            }}
+            color={toggleTheme ? theme.home_bg : theme.home_text}
+          >
             Lazy<span>Fix</span>
           </$LogoContainer>
           <div className="nav_links">
             <ul>
-              <li>Docs</li>
+              <li
+                onClick={() => {
+                  navigate("/get-started");
+                }}
+              >
+                Docs
+              </li>
               <li
                 onClick={() => {
                   navigate("/buttons");
@@ -210,6 +221,7 @@ const $LogoContainer = styled.h1`
   font-size: 1.9rem;
   font-weight: 900;
   font-family: "Kanit", sans-serif;
+  cursor: pointer;
 
   span {
     color: #4361ee;

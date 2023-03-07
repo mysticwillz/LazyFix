@@ -7,6 +7,7 @@ import {
   HomePage,
   HowToUsePage,
   NavsPage,
+  PaginationPage,
   SpinnersPage,
 } from "./Pages";
 import "./index.css";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/forms" element={<FormsPage />} />
           <Route path="/cards" element={<CardsPage />} />
           <Route path="/navigations" element={<NavsPage />} />
+          <Route path="/paginations" element={<PaginationPage />} />
         </Routes>
       </ModeContext.Provider>
     </>

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import {
   Container,
   Heading,
@@ -8,22 +7,23 @@ import {
   Components,
 } from "../../Reusables/Styles";
 import { theme } from "../../Theme";
-import { ButtonData } from "./ButtonData";
+
+import { PaginateData } from "./PaginateData";
 
 interface toggleProps {
   toggleTheme: boolean;
 }
-function Button({ toggleTheme }: toggleProps) {
+function Pagination({ toggleTheme }: toggleProps) {
   return (
     <Container color={toggleTheme ? theme.home_text : theme.home_bg}>
       <Heading color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
         {" "}
-        Button Components
+        Pagination Components
       </Heading>
       <>
-        {ButtonData.length > 0 &&
-          ButtonData?.map((buttons) => {
-            const { title, button } = buttons;
+        {PaginateData.length > 0 &&
+          PaginateData?.map((paginates) => {
+            const { title, pagination } = paginates;
 
             return (
               <ComponentWrapper
@@ -36,7 +36,7 @@ function Button({ toggleTheme }: toggleProps) {
                   {title}
                 </Title>
                 <h5>View React source code</h5>
-                <Components>{button}</Components>
+                <Components>{pagination}</Components>
               </ComponentWrapper>
             );
           })}
@@ -45,4 +45,4 @@ function Button({ toggleTheme }: toggleProps) {
   );
 }
 
-export default Button;
+export default Pagination;
