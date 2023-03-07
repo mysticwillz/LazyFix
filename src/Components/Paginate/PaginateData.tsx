@@ -1,13 +1,18 @@
 import AppleCard from "../Cards/AppleCard/AppleCard";
 import BluePagination from "./BluePagination/BluePagination";
+import SimplePagination from "./SimplePagination/SimplePagination";
 
 interface PageType {
   title: string;
-  card: JSX.Element;
+  pagination: JSX.Element;
 }
 export const PaginateData: PageType[] = [
   {
     title: "Blue pagination",
-    card: <BluePagination />,
+    pagination: <BluePagination />,
+  },
+  {
+    title: "Simple pagination",
+    pagination: <SimplePagination />,
   },
 ];

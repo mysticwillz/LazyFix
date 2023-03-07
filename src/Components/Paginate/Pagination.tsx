@@ -22,8 +22,8 @@ function Pagination({ toggleTheme }: toggleProps) {
       </Heading>
       <>
         {PaginateData.length > 0 &&
-          PaginateData?.map((forms) => {
-            const { title, card } = forms;
+          PaginateData?.map((paginates) => {
+            const { title, pagination } = paginates;
 
             return (
               <ComponentWrapper
@@ -36,7 +36,7 @@ function Pagination({ toggleTheme }: toggleProps) {
                   {title}
                 </Title>
                 <h5>View React source code</h5>
-                <Components>{card}</Components>
+                <Components>{pagination}</Components>
               </ComponentWrapper>
             );
           })}
