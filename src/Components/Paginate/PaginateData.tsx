@@ -1,5 +1,6 @@
 import AppleCard from "../Cards/AppleCard/AppleCard";
 import ActivePagination from "./ActivePagination/ActivePagination";
+import AllRoundPagination from "./AllRound/AllRoundPagination";
 import BluePagination from "./BluePagination/BluePagination";
 import RoundedPagination from "./Rounded/RoundedPagination";
 import SimplePagination from "./SimplePagination/SimplePagination";
@@ -24,5 +25,9 @@ export const PaginateData: PageType[] = [
   {
     title: "Rounded corner pagination",
     pagination: <RoundedPagination />,
+  },
+  {
+    title: "All round pagination",
+    pagination: <AllRoundPagination />,
   },
 ];
