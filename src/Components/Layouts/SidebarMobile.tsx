@@ -24,6 +24,7 @@ function SidebarMobile({ toggleTheme, showSidebar }: toggleProps) {
     { bars: "Forms", link: "/forms" },
     { bars: "Cards", link: "/cards" },
     { bars: "Navigations", link: "/navigations" },
+    { bars: "Paginations", link: "/paginations" },
   ];
 
   const location = useLocation();

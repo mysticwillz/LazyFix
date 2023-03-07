@@ -22,6 +22,7 @@ function Sidebar({ toggleTheme }: toggleProps) {
     { bars: "Forms", link: "/forms" },
     { bars: "Cards", link: "/cards" },
     { bars: "Navigations", link: "/navigations" },
+    { bars: "Paginations", link: "/paginations" },
   ];
 
   const location = useLocation();
@@ -99,6 +100,7 @@ function Sidebar({ toggleTheme }: toggleProps) {
 }
 
 export default Sidebar;
+
 const ContainerWrapper = styled.section`
   width: 20%;
   height: 100%;
