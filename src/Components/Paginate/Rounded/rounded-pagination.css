@@ -1,0 +1,39 @@
+.rounded--pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.rounded--pagination > a,
+.rounded--pagination > span {
+  background-color: #ddd;
+  color: #636363;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 17px;
+  margin: 0 3px 5px;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.rounded--pagination > span {
+  pointer-events: none;
+}
+.rounded--pagination svg {
+  height: 24px;
+  width: 24px;
+}
+.rounded--pagination > a:hover {
+  background-color: #0091ff;
+  color: #fff;
+}
+.rounded--pagination > a.rounded--page-active {
+  background-color: #0091ff;
+  color: #fff;
+}
