@@ -102,7 +102,7 @@ function Sidebar({ toggleTheme }: toggleProps) {
 export default Sidebar;
 
 const ContainerWrapper = styled.section`
-  width: 20%;
+  width: 19%;
   height: 100%;
   background-color: ${(props) => props.color};
   flex-direction: column;
@@ -131,10 +131,8 @@ const ContainerWrapper = styled.section`
     color: #4361ee;
     margin: 10px 0;
   }
-
   ::-webkit-scrollbar {
-    width: 15px;
-    border-radius: 10px 0;
+    width: 2px;
   }
   Track &::-webkit-scrollbar-track {
     background: #f1f1f1;
@@ -142,6 +140,7 @@ const ContainerWrapper = styled.section`
 
   &::-webkit-scrollbar-thumb {
     background: #888;
+    border-radius: 20px 0;
   }
 
   &::-webkit-scrollbar-thumb:hover {
