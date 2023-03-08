@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Container, Heading } from "../../Reusables/Styles";
 import { theme } from "../../Theme";
-
+import clicktocopy from "../../Assets/clicktocopy.png";
 interface toggleProps {
   toggleTheme: boolean;
 }
@@ -34,19 +34,40 @@ function GettingStarted({ toggleTheme }: toggleProps) {
         </Article>
         <SubHeading> How to use </SubHeading>
         <Article color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
-          The functionality of copying the code snippets is built into the
-          Lazyfix web app. This means that users can easily access the pre-built
-          Web components, view their code snippets, and copy them directly from
-          the web app without needing to clone the GitHub repository.
+          <span>
+            The functionality of copying the code snippets is built into the
+            Lazyfix web app.
+          </span>{" "}
+          This means that users can easily access the pre-built Web components,
+          view their code snippets, and copy them directly from the web app
+          without needing to clone the GitHub repository.
         </Article>
         <Article
           className="photo-heading"
           color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
         >
-          1. Click on copy Html and Css code
+          1. Click on view Html and Css code
         </Article>
         <ImageContainer>
-          <img src="" alt="first image description" />
+          <img src={clicktocopy} alt="first image description" />
+        </ImageContainer>
+        <Article
+          className="photo-heading"
+          color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
+        >
+          2.Choose the template to copy
+        </Article>
+        <ImageContainer>
+          <img src={clicktocopy} alt="first image description" />
+        </ImageContainer>
+        <Article
+          className="photo-heading"
+          color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
+        >
+          2.Click copy to copy code snippet
+        </Article>
+        <ImageContainer>
+          <img src={clicktocopy} alt="first image description" />
         </ImageContainer>
       </SubContainer>
     </Container>
@@ -55,12 +76,18 @@ function GettingStarted({ toggleTheme }: toggleProps) {
 
 export default GettingStarted;
 
-const SubContainer = styled.h5`
+const SubContainer = styled.main`
   width: 80%;
   margin-left: 50px;
   .para {
     margin-top: 10px;
     margin-bottom: 30px;
+  }
+  .photo-heading {
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 22px;
   }
 `;
 const SubHeading = styled.h5`
@@ -82,9 +109,14 @@ const Article = styled.p`
   }
 `;
 const ImageContainer = styled.div`
+  width: 100%;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `;
