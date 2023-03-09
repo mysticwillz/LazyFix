@@ -192,7 +192,7 @@ const GetStarted = styled.ul`
     font-weight: normal;
     cursor: pointer;
     list-style-type: none;
-    padding: 7px 20px;
+    padding: 7px 0px;
     border: 1.5px solid gray;
     border-radius: 0 10px 10px 0;
     text-align: center;
@@ -217,7 +217,7 @@ const List = styled.li`
   font-weight: normal;
   cursor: pointer;
   list-style-type: none;
-  padding: 7px 20px;
+  padding: 7px 0px;
   border: 1.5px solid gray;
   border-radius: 0 10px 10px 0;
   margin-bottom: 10px;

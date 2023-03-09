@@ -4,7 +4,9 @@ export const Container = styled.div`
   width: 100%;
   position: absolute;
   right: 0;
+
   top: 70px;
+  overflow-x: hidden;
 
   background-color: ${(props) => props.color};
   @media (min-width: 768px) {
