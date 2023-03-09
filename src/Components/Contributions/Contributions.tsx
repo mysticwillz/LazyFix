@@ -13,7 +13,28 @@ function Contributions({ toggleTheme }: toggleProps) {
         {" "}
         Contribution Guidelines
       </Heading>
-      <SubContainer>
+      <SubContainer
+        color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
+      >
+        <SubHeading>Prerequisites</SubHeading>
+        <Article color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+          Before contributing to the LazyFix project, you should have a basic
+          understanding of the following technologies:
+        </Article>
+        <ul className="list">
+          <li>Html</li>
+          <li>Css</li>
+          <li>React</li>
+          <li>Typescript</li>
+          <li>Styled Components</li>
+          <li>Git and Github</li>
+        </ul>
+        <SmallHeading
+          color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
+        >
+          {" "}
+          Step-by-Step Guide
+        </SmallHeading>
         <SubHeading> 1. Fork the main repository</SubHeading>
         <Article
           className="shift"
@@ -30,7 +51,7 @@ function Contributions({ toggleTheme }: toggleProps) {
         </Article>
 
         <CopyCode>
-          git clone https://github.com/your-username/lazyfix.git
+          git clone https://github.com/mysticwillz/lazyfix.git
         </CopyCode>
         <SubHeading> 3. Install dependencies</SubHeading>
         <Article color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
@@ -38,9 +59,7 @@ function Contributions({ toggleTheme }: toggleProps) {
           install the project dependencies using the command:
         </Article>
 
-        <ImageContainer className="shift">
-          <img src={clicktocopy} alt="first image description" />
-        </ImageContainer>
+        <CopyCode>npm install</CopyCode>
         <SubHeading> 4. Create a new branch</SubHeading>
         <Article color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           It is important to create a new branch for each new feature or bug fix
@@ -48,9 +67,7 @@ function Contributions({ toggleTheme }: toggleProps) {
           create a new branch, use the command:
         </Article>
 
-        <ImageContainer className="shift">
-          <img src={clicktocopy} alt="first image description" />
-        </ImageContainer>
+        <CopyCode>git checkout -b new-branch-name</CopyCode>
         <SubHeading> 5. Make changes and commit</SubHeading>
         <Article color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           After creating a new branch, make the necessary changes to the
@@ -58,9 +75,7 @@ function Contributions({ toggleTheme }: toggleProps) {
           command:
         </Article>
 
-        <ImageContainer>
-          <img src={clicktocopy} alt="first image description" />
-        </ImageContainer>
+        <CopyCode>git add . & git commit -m "your commit message"</CopyCode>
         <Article
           className="shift"
           color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
@@ -74,9 +89,7 @@ function Contributions({ toggleTheme }: toggleProps) {
           repository using the command:
         </Article>
 
-        <ImageContainer className="shift">
-          <img src={clicktocopy} alt="first image description" />
-        </ImageContainer>
+        <CopyCode>git push origin new-branch-name</CopyCode>
         <SubHeading> 7. Create a pull request</SubHeading>
         <Article
           className="shift"
@@ -88,11 +101,20 @@ function Contributions({ toggleTheme }: toggleProps) {
           the reason for making them.
         </Article>
         <SubHeading> 8. Review and merge</SubHeading>
-        <Article color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
+        <Article
+          className="shift"
+          color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
+        >
           Once your pull request has been submitted, it will be reviewed by the
           project maintainers. If your changes are accepted, they will be merged
           into the main codebase.
         </Article>
+
+        <SmallHeading
+          color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
+        >
+          Conclusion
+        </SmallHeading>
         <Article
           className="para"
           color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
@@ -124,6 +146,12 @@ const SubContainer = styled.main`
   .shift {
     margin-bottom: 30px;
   }
+  .list {
+    font-size: 18px;
+    line-height: 28px;
+    color: ${(props) => props.color};
+    font-weight: 400;
+  }
 `;
 const SubHeading = styled.h5`
   font-size: 22px;
@@ -143,16 +171,10 @@ const Article = styled.p`
     font-weight: 600;
   }
 `;
-const ImageContainer = styled.div`
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid gray;
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
+const SmallHeading = styled.h2`
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: ${(props) => props.color};
 `;

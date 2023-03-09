@@ -27,10 +27,10 @@ function NavModal({ toggleTheme }: ModeProps) {
           </li>
           <li
             onClick={() => {
-              navigate("/blog");
+              navigate("/contributions");
             }}
           >
-            Blog
+            How to Contribute
           </li>
         </List>
         <button
