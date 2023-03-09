@@ -131,8 +131,9 @@ function Contributions({ toggleTheme }: toggleProps) {
 export default Contributions;
 
 const SubContainer = styled.main`
-  width: 85%;
-  margin-left: 50px;
+  max-width: 100%;
+  padding: 0 5px;
+  overflow-x: hidden;
   .para {
     margin-top: 10px;
     margin-bottom: 30px;
@@ -147,10 +148,22 @@ const SubContainer = styled.main`
     margin-bottom: 30px;
   }
   .list {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 15px;
+    line-height: 22px;
     color: ${(props) => props.color};
     font-weight: 400;
+    list-style-type: none;
+  }
+
+  @media (min-width: 768px) {
+    width: 85%;
+    padding: 0 0px;
+    margin-left: 50px;
+
+    .list {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 `;
 const SubHeading = styled.h5`
@@ -162,13 +175,17 @@ const SubHeading = styled.h5`
 `;
 
 const Article = styled.p`
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 15px;
+  line-height: 22px;
   color: ${(props) => props.color};
   font-weight: 400;
 
   span {
     font-weight: 600;
+  }
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 26px;
   }
 `;
 const SmallHeading = styled.h2`

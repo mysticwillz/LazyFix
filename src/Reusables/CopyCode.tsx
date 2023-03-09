@@ -50,7 +50,7 @@ export default function CopyCode({ children }: CodeType) {
 }
 
 const MainContainer = styled.section`
-  width: 100%;
+  max-width: 100%;
   height: 40px;
   padding: 0px 20px;
   display: flex;
@@ -82,7 +82,7 @@ const MainContainer = styled.section`
   }
 `;
 const Container = styled.section`
-  width: 100%;
+  max-width: 100%;
   height: auto;
   padding: 30px 20px;
   background-color: #102537;
