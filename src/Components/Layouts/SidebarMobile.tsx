@@ -16,7 +16,7 @@ function SidebarMobile({ toggleTheme, showSidebar }: toggleProps) {
 
   const documentation: sideProps[] = [
     { bars: " Get started", link: "/get-started" },
-    { bars: "How to use", link: "/how-to-use" },
+    { bars: "Contributions", link: "/contributions" },
   ];
   const sideNav: sideProps[] = [
     { bars: " Buttons", link: "/buttons" },
