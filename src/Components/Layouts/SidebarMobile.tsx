@@ -16,7 +16,7 @@ function SidebarMobile({ toggleTheme, showSidebar }: toggleProps) {
 
   const documentation: sideProps[] = [
     { bars: " Get started", link: "/get-started" },
-    { bars: "How to use", link: "/how-to-use" },
+    { bars: "Contributions", link: "/contributions" },
   ];
   const sideNav: sideProps[] = [
     { bars: " Buttons", link: "/buttons" },
@@ -129,6 +129,11 @@ const ContainerWrapper = styled.section`
     color: #4361ee;
     margin: 10px 0;
     padding-left: 10px;
+  }
+  .active--location {
+    background-color: #4361ee;
+    color: white;
+    border: 1.5px solid #4361ee;
   }
 `;
 const Wrapper = styled.div`

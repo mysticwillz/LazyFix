@@ -14,7 +14,7 @@ function Sidebar({ toggleTheme }: toggleProps) {
 
   const documentation: sideProps[] = [
     { bars: " Get started", link: "/get-started" },
-    { bars: "How to use", link: "/how-to-use" },
+    { bars: "Contributions", link: "/contributions" },
   ];
   const sideNav: sideProps[] = [
     { bars: " Buttons", link: "/buttons" },
@@ -102,7 +102,7 @@ function Sidebar({ toggleTheme }: toggleProps) {
 export default Sidebar;
 
 const ContainerWrapper = styled.section`
-  width: 20%;
+  width: 19%;
   height: 100%;
   background-color: ${(props) => props.color};
   flex-direction: column;
@@ -131,10 +131,8 @@ const ContainerWrapper = styled.section`
     color: #4361ee;
     margin: 10px 0;
   }
-
   ::-webkit-scrollbar {
-    width: 15px;
-    border-radius: 10px 0;
+    width: 2px;
   }
   Track &::-webkit-scrollbar-track {
     background: #f1f1f1;
@@ -142,6 +140,7 @@ const ContainerWrapper = styled.section`
 
   &::-webkit-scrollbar-thumb {
     background: #888;
+    border-radius: 20px 0;
   }
 
   &::-webkit-scrollbar-thumb:hover {
@@ -193,7 +192,7 @@ const GetStarted = styled.ul`
     font-weight: normal;
     cursor: pointer;
     list-style-type: none;
-    padding: 7px 20px;
+    padding: 7px 0px;
     border: 1.5px solid gray;
     border-radius: 0 10px 10px 0;
     text-align: center;
@@ -218,7 +217,7 @@ const List = styled.li`
   font-weight: normal;
   cursor: pointer;
   list-style-type: none;
-  padding: 7px 20px;
+  padding: 7px 0px;
   border: 1.5px solid gray;
   border-radius: 0 10px 10px 0;
   margin-bottom: 10px;

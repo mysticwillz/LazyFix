@@ -2,10 +2,10 @@ import { Routes, Route } from "react-router-dom";
 import {
   ButtonsPage,
   CardsPage,
+  ContributionsPage,
   FormsPage,
   GetStartedPagePage,
   HomePage,
-  HowToUsePage,
   NavsPage,
   PaginationPage,
   SpinnersPage,
@@ -22,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/get-started" element={<GetStartedPagePage />} />
-          <Route path="/how-to-use" element={<HowToUsePage />} />
+          <Route path="/contributions" element={<ContributionsPage />} />
           <Route path="/buttons" element={<ButtonsPage />} />
           <Route path="/spinners" element={<SpinnersPage />} />
           <Route path="/forms" element={<FormsPage />} />

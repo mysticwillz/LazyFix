@@ -1,19 +1,18 @@
 import React, { useContext } from "react";
-
-import HowToUse from "../Components/HowToUse/HowToUse";
+import Contributions from "../Components/Contributions/Contributions";
 
 import { ModeContext } from "../Context/ModeContext";
 import AppLayouts from "../Layouts/AppLayouts";
 
-function HowTo() {
+function Contribute() {
   const { toggleTheme } = useContext(ModeContext);
   return (
     <>
       <AppLayouts>
-        <HowToUse toggleTheme={toggleTheme} />
+        <Contributions toggleTheme={toggleTheme} />
       </AppLayouts>
     </>
   );
 }
 
-export default HowTo;
+export default Contribute;

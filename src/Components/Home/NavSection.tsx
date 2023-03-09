@@ -49,7 +49,13 @@ function NavSection({
               >
                 Components
               </li>
-              <li>Blog</li>
+              <li
+                onClick={() => {
+                  navigate("/contributions");
+                }}
+              >
+                Contributions
+              </li>
             </ul>
 
             <button

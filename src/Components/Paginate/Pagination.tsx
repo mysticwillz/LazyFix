@@ -35,7 +35,7 @@ function Pagination({ toggleTheme }: toggleProps) {
                 >
                   {title}
                 </Title>
-                <h5>View React source code</h5>
+                <h5>View HTML & CSS source code</h5>
                 <Components>{pagination}</Components>
               </ComponentWrapper>
             );
