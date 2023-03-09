@@ -15,8 +15,11 @@ export const Heading = styled.h1`
   text-align: center;
   font-size: 32px;
   font-weight: bold;
-  margin: 20px 0 30px;
+  margin: 10px 0 15px;
   color: ${(props) => props.color};
+  @media (min-width: 768px) {
+    margin: 20px 0 30px;
+  }
 `;
 export const ComponentWrapper = styled.div`
   width: 90%;

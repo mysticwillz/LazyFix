@@ -130,6 +130,11 @@ const ContainerWrapper = styled.section`
     margin: 10px 0;
     padding-left: 10px;
   }
+  .active--location {
+    background-color: #4361ee;
+    color: white;
+    border: 1.5px solid #4361ee;
+  }
 `;
 const Wrapper = styled.div`
   width: 100%;

@@ -148,7 +148,7 @@ const SubContainer = styled.main`
     margin-bottom: 30px;
   }
   .list {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 22px;
     color: ${(props) => props.color};
     font-weight: 400;
@@ -175,7 +175,7 @@ const SubHeading = styled.h5`
 `;
 
 const Article = styled.p`
-  font-size: 15px;
+  font-size: 16px;
   line-height: 22px;
   color: ${(props) => props.color};
   font-weight: 400;

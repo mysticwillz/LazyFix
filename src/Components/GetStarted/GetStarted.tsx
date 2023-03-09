@@ -69,7 +69,7 @@ function GettingStarted({ toggleTheme }: toggleProps) {
         <ImageContainer>
           <img src={clicktocopy} alt="first image description" />
         </ImageContainer>
-        <SubHeading> Conclusion</SubHeading>
+        <SubHeading className="conclusion-heading"> Conclusion</SubHeading>
         <Article color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
           To use this feature, users can simply navigate to the component they
           want to use, view the code snippet, and click on the{" "}
@@ -78,7 +78,7 @@ function GettingStarted({ toggleTheme }: toggleProps) {
           editor or IDE.
         </Article>
         <Article
-          className="para"
+          className="article-para"
           color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
         >
           It's important to note that the "Copy" button relies on the Clipboard
@@ -89,7 +89,7 @@ function GettingStarted({ toggleTheme }: toggleProps) {
           operating system.
         </Article>
         <Article
-          className="para"
+          className="article-para2"
           color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}
         >
           In conclusion, LazyFix is a useful web application for frontend
@@ -107,8 +107,8 @@ function GettingStarted({ toggleTheme }: toggleProps) {
 export default GettingStarted;
 
 const SubContainer = styled.main`
-  width: 90%;
-  margin-left: 50px;
+  width: 100%;
+  padding: 0 5px;
   .para {
     margin-top: 10px;
     margin-bottom: 30px;
@@ -119,28 +119,50 @@ const SubContainer = styled.main`
     margin-bottom: 10px;
     font-size: 22px;
   }
+  .conclusion-heading {
+    margin-top: 30px;
+  }
+  .article-para {
+    margin-top: 15px;
+  }
+  .article-para2 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  @media (min-width: 768px) {
+    width: 90%;
+    padding: 0 0px;
+    margin-left: 50px;
+  }
 `;
 const SubHeading = styled.h5`
   font-size: 28px;
-  line-height: 54px;
+  line-height: 40px;
 
   color: #4361ee;
   font-family: "Roboto", sans-serif;
+  @media (min-width: 768px) {
+    line-height: 54px;
+  }
 `;
 
 const Article = styled.p`
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 22px;
   color: ${(props) => props.color};
   font-weight: 400;
 
   span {
     font-weight: 600;
   }
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 26px;
+  }
 `;
 const ImageContainer = styled.div`
-  width: 100%;
-  height: 400px;
+  max-width: 100%;
+  max-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
