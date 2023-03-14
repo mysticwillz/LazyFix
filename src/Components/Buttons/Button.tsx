@@ -44,7 +44,7 @@ function Button({ toggleTheme }: toggleProps) {
                 >
                   View HTML & CSS source code
                 </h5>
-                {openModal && <Modal setOpenModal={openModal} />}
+                {openModal && <Modal setOpenModal={setOpenModal} />}
                 <Components>{button}</Components>
               </ComponentWrapper>
             );

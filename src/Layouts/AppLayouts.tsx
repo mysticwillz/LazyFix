@@ -71,7 +71,7 @@ const Container = styled.section`
     bottom: 100px;
     width: 60px;
     height: 60px;
-    z-index: 80;
+    z-index: 32;
 
     color: ${theme.home_bg};
     @media (min-width: 768px) {
