@@ -5,6 +5,7 @@ import Hero from "../Components/Home/Hero";
 
 import NavSection from "../Components/Home/NavSection";
 import { ModeContext } from "../Context/ModeContext";
+
 import { theme } from "../Theme";
 
 function Home() {
@@ -32,7 +33,7 @@ export default Home;
 const Container = styled.main`
   background-color: ${(props) => props.color};
   width: 100%;
-  max-width: 100%;
+
   min-height: 100vh;
 
   overflow-x: hidden;

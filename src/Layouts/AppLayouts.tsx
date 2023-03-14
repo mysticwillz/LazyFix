@@ -56,7 +56,7 @@ const MainContainer = styled.main`
   background-color: ${(props) => props.color};
   width: 100%;
   max-width: 1440px;
-  height: auto;
+  height: 100vh;
   font-family: "Outfit", sans-serif;
   position: relative;
 `;
@@ -67,13 +67,13 @@ const Container = styled.section`
 
   .show--bar {
     position: fixed;
-    right: 20px;
-    bottom: 100px;
+    right: 1rem;
+    bottom: 5rem;
     width: 60px;
     height: 60px;
-    z-index: 80;
+    z-index: 32;
 
-    color: ${theme.home_bg};
+    color: #4361ee;
     @media (min-width: 768px) {
       display: none;
     }

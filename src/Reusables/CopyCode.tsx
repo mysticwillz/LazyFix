@@ -44,7 +44,12 @@ export default function CopyCode({ children }: CodeType) {
           )}
         </div>
       </MainContainer>
-      <Container>{children}</Container>;
+      <Container>
+        <code>
+          <pre>{children}</pre>
+        </code>
+      </Container>
+      ;
     </>
   );
 }
@@ -84,8 +89,26 @@ const MainContainer = styled.section`
 const Container = styled.section`
   max-width: 100%;
   height: auto;
+  max-height: 80%;
   padding: 30px 20px;
   background-color: #102537;
   color: #dbdde0;
   border-radius: 0 0 15px 15px;
+  overflow-y: auto;
+
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+  Track &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 20px 0;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 `;

@@ -40,7 +40,7 @@ function NavSection({
                   navigate("/get-started");
                 }}
               >
-                Docs
+                Documentation
               </li>
               <li
                 onClick={() => {
@@ -116,7 +116,7 @@ const $OverallContainer = styled.main`
   justify-content: center;
   position: fixed;
   top: 0;
-  font-family: "Outfit", sans-serif;
+  font-family: "Poppins", sans-serif;
   z-index: 30;
   background-color: ${(props) => props.color};
 `;
@@ -149,11 +149,12 @@ const $Container = styled.nav`
 
     @media (min-width: 768px) {
       display: flex;
-      width: 600px;
+      width: 70%;
     }
   }
   ul {
-    width: 250px;
+    min-width: 250px;
+
     list-style-type: none;
 
     align-items: center;
@@ -161,12 +162,14 @@ const $Container = styled.nav`
     display: none;
     @media (min-width: 768px) {
       display: flex;
-      width: 250px;
+      width: 400px;
     }
   }
   li {
     transition: all 0.3s ease-in-out;
-
+    margin: 0 10px;
+    font-weight: 500;
+    font-size: 18px;
     &:hover {
       cursor: pointer;
       color: #4361ee;
@@ -181,7 +184,7 @@ const $Container = styled.nav`
     height: 40px;
     cursor: pointer;
     background-color: #4361ee;
-    border-radius: 4px;
+    border-radius: 20px;
     border: none;
     margin-left: 50px;
     transition: all 0.2s ease-in;
