@@ -5,6 +5,7 @@ import Hero from "../Components/Home/Hero";
 
 import NavSection from "../Components/Home/NavSection";
 import { ModeContext } from "../Context/ModeContext";
+
 import { theme } from "../Theme";
 
 function Home() {
