@@ -51,7 +51,7 @@ function Contributions({ toggleTheme }: toggleProps) {
         </Article>
 
         <CopyCode>
-          git clone https://github.com/mysticwillz/lazyfix.git
+          git clone https://github.com/mysticwillz/LazyFix.git
         </CopyCode>
         <SubHeading> 3. Install dependencies</SubHeading>
         <Article color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>

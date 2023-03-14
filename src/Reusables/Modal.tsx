@@ -22,9 +22,11 @@ export default function Modal({ setOpenModal, a, b }: ModalProps) {
         </div>
         <CodeContainer>
           <div className="first-div">
+            <h2>HTML</h2>
             <CopyCode>{a}</CopyCode>
           </div>
           <div>
+            <h2>CSS</h2>
             <CopyCode>{b}</CopyCode>
           </div>
         </CodeContainer>
@@ -44,7 +46,7 @@ const ModalContainer = styled.main`
   right: 50%;
 
   transform: translate(-50%, -50%);
-  background: rgba(106, 105, 105, 0.1);
+  background: rgba(106, 105, 105, 0.4);
   z-index: 40;
 `;
 const CodeContainerWrapper = styled.section`
@@ -56,7 +58,7 @@ const CodeContainerWrapper = styled.section`
   left: 50%;
   right: 50%;
   padding: 10px;
-
+  position: relative;
   transform: translate(-50%, -50%);
   background: #fff;
   z-index: 50;
@@ -86,6 +88,12 @@ const CodeContainer = styled.section`
     height: 90%;
 
     padding: 0 10px;
+
+    h2 {
+      padding-left: 15px;
+      position: absolute;
+      top: 2rem;
+    }
   }
   .first-div {
     border-right: 1px solid gray;
