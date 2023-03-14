@@ -2,10 +2,13 @@ import React from "react";
 import { createPortal } from "react-dom";
 import styled from "styled-components";
 import { GrClose } from "react-icons/gr";
+import CopyCode from "./CopyCode";
 type ModalProps = {
   setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
+  a: string;
+  b: string;
 };
-export default function Modal({ setOpenModal }: ModalProps) {
+export default function Modal({ setOpenModal, a, b }: ModalProps) {
   return createPortal(
     <ModalContainer>
       <CodeContainerWrapper>
@@ -18,8 +21,12 @@ export default function Modal({ setOpenModal }: ModalProps) {
           />
         </div>
         <CodeContainer>
-          <div className="first-div"></div>
-          <div></div>
+          <div className="first-div">
+            <CopyCode>{a}</CopyCode>
+          </div>
+          <div>
+            <CopyCode>{b}</CopyCode>
+          </div>
         </CodeContainer>
       </CodeContainerWrapper>
     </ModalContainer>,

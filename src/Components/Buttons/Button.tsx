@@ -25,7 +25,7 @@ function Button({ toggleTheme }: toggleProps) {
       <>
         {ButtonData.length > 0 &&
           ButtonData?.map((buttons) => {
-            const { title, button } = buttons;
+            const { title, button, html, css } = buttons;
 
             return (
               <ComponentWrapper
@@ -44,7 +44,9 @@ function Button({ toggleTheme }: toggleProps) {
                 >
                   View HTML & CSS source code
                 </h5>
-                {openModal && <Modal setOpenModal={setOpenModal} />}
+                {openModal && (
+                  <Modal setOpenModal={setOpenModal} a={html} b={css} />
+                )}
                 <Components>{button}</Components>
               </ComponentWrapper>
             );
