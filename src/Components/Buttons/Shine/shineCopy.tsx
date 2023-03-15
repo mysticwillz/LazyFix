@@ -1,12 +1,12 @@
-export const borderHtmlCode: string = `    <main id="main">
-   
+export const shineHtmlCode: string = `        <main id="main">
+      
       <div>
-        <button type="button" class="border--button">
-          Show The Border
+        <button type="button" className="shine--button">
+          Shine
         </button>
       </div>
     </main>`;
-export const borderCssCode: string = ` #main {
+export const shineCssCode: string = `#main {
   width: 100%;
   height: 100%;
 
@@ -30,26 +30,38 @@ export const borderCssCode: string = ` #main {
   height: 100%;
 }
 
-.border--button {
+.shine--button {
   position: relative;
   border: none;
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease-out;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
-  width: 180px;
+  width: 160px;
   height: 50px;
-  background: #114989;
-  color: aliceblue;
+  background: #c5d2e1;
   cursor: pointer;
   overflow: hidden;
   border-radius: 6px;
 }
-.border--button:hover {
-  border: 1px solid #114989;
-  background-color: transparent;
-  color: black;
+.shine--button::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  height: 100%;
+  left: -35%;
+  top: 0%;
+  transform: skew(50deg);
+  transition-duration: 0.6s;
+  transform-origin: top left;
+  width: 0;
+  background: #82a3c8;
+}
+
+.shine--button:hover:after {
+  height: 100%;
+  width: 135%;
 }
 `;

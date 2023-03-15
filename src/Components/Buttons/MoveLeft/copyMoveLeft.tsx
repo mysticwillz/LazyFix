@@ -1,5 +1,5 @@
 export const moveLeftHtmlCode: string = `    <main id="main">
-      <h4 class="heading">Hover to see effect</h4>
+    
       <div>
         <button type="button" class="move--left--button">
           Move Left

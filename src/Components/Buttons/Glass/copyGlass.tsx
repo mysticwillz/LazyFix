@@ -1,5 +1,5 @@
 export const glassHtmlCode: string = `    <main id="main">
-      <h4 class="heading">Hover to see effect</h4>
+    
       <div>
         <button class="full-rounded">Hover me</button>
       </div>

@@ -1,5 +1,5 @@
 export const doubleHtmlCode: string = `     <main id="main">
-      <h4 class="heading">Hover to see effect</h4>
+ 
       <div>
         <button type="button" class="double--button">
           Move Left

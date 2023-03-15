@@ -1,12 +1,12 @@
-export const borderHtmlCode: string = `    <main id="main">
-   
+export const shutterHtmlCode: string = `  <main id="main">
+     
       <div>
-        <button type="button" class="border--button">
-          Show The Border
+        <button type="button" class="shutter--button">
+          Shut The Door
         </button>
       </div>
     </main>`;
-export const borderCssCode: string = ` #main {
+export const shutterCssCode: string = `#main {
   width: 100%;
   height: 100%;
 
@@ -30,26 +30,24 @@ export const borderCssCode: string = ` #main {
   height: 100%;
 }
 
-.border--button {
+.shutter--button {
   position: relative;
   border: none;
-  transition: 0.6s ease-in-out;
+  transition: 0.4s ease-in;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
-  width: 180px;
+  width: 200px;
   height: 50px;
-  background: #114989;
-  color: aliceblue;
+  background: #b2eded;
   cursor: pointer;
-  overflow: hidden;
-  border-radius: 6px;
+  border-radius: 10px;
 }
-.border--button:hover {
-  border: 1px solid #114989;
-  background-color: transparent;
-  color: black;
+
+.shutter--button:hover {
+  box-shadow: inset -10.5em 0 0 0 #0e4159, inset 10.5em 0 0 0 #0e4159;
+  color: aliceblue;
 }
 `;
