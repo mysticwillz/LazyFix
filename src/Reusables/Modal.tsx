@@ -5,10 +5,12 @@ import { GrClose } from "react-icons/gr";
 import CopyCode from "./CopyCode";
 type ModalProps = {
   setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
-  a: string;
-  b: string;
+  sendCode: {
+    html: string;
+    css: string;
+  };
 };
-export default function Modal({ setOpenModal, a, b }: ModalProps) {
+export default function Modal({ setOpenModal, sendCode }: ModalProps) {
   return createPortal(
     <ModalContainer>
       <CodeContainerWrapper>
@@ -23,11 +25,11 @@ export default function Modal({ setOpenModal, a, b }: ModalProps) {
         <CodeContainer>
           <div className="first-div">
             <h2>HTML</h2>
-            <CopyCode>{a}</CopyCode>
+            <CopyCode>{sendCode.html}</CopyCode>
           </div>
           <div>
             <h2>CSS</h2>
-            <CopyCode>{b}</CopyCode>
+            <CopyCode>{sendCode.css}</CopyCode>
           </div>
         </CodeContainer>
       </CodeContainerWrapper>
