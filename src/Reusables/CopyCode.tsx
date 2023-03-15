@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { FaRegCopy } from "react-icons/fa";
 import { GiCheckMark } from "react-icons/gi";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { docco as light } from "react-syntax-highlighter/dist/esm/styles/hljs";
 interface CodeType {
   children: string;
 }
@@ -46,7 +48,12 @@ export default function CopyCode({ children }: CodeType) {
       </MainContainer>
       <Container>
         <code>
-          <pre>{children}</pre>
+          <pre>
+            {" "}
+            <SyntaxHighlighter language="jsx" style={light}>
+              {children}
+            </SyntaxHighlighter>
+          </pre>
         </code>
       </Container>
       ;
