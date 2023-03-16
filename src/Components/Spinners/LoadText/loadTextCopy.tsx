@@ -17,15 +17,15 @@ export const loadTextCssCode: string = ` @import url("https://fonts.googleapis.c
   color: rgb(63, 4, 36);
 }
 
+
 .load--spin::after {
-  content: "\2026";
+  content: "2026 ";
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
   width: 0;
   animation: dots steps(4, end) 2s infinite;
 }
-
 @keyframes dots {
   to {
     width: 45px;
