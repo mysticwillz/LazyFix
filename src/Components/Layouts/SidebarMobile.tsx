@@ -36,12 +36,6 @@ function SidebarMobile({ toggleTheme, showSidebar }: toggleProps) {
       >
         <Wrapper color={toggleTheme ? theme.home_text : theme.home_bg}>
           <Container>
-            <input
-              type="text"
-              value={searchInput}
-              name="searchInput"
-              placeholder="search for components"
-            />
             <h2>Documentation</h2>
             <GetStarted
               color={
@@ -152,23 +146,6 @@ const Container = styled.div`
 
   flex-direction: column;
 
-  input {
-    width: 100%;
-    height: 40px;
-    outline: none;
-    background-color: #2d9ef54f;
-    border: 1px solid gray;
-    border-radius: 4px;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: medium;
-    padding: 0 10px;
-    margin: 20px 10px 15px;
-
-    &:focus {
-      background-color: white;
-    }
-  }
   h2 {
     font-size: 18px;
     line-height: 24px;

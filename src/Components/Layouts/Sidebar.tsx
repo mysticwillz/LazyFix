@@ -31,12 +31,6 @@ function Sidebar({ toggleTheme }: toggleProps) {
     <>
       <ContainerWrapper color={toggleTheme ? theme.home_text : theme.home_bg}>
         <Container>
-          <input
-            type="text"
-            value={searchInput}
-            name="searchInput"
-            placeholder="search for components"
-          />
           <h2>Documentation</h2>
           <GetStarted
             color={
@@ -155,28 +149,12 @@ const Container = styled.div`
 
   flex-direction: column;
 
-  input {
-    width: 95%;
-    height: 40px;
-    outline: none;
-    background-color: #2d9ef54f;
-    border: 1px solid gray;
-    border-radius: 4px;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: medium;
-    padding: 0 10px;
-    margin: 40px auto 30px;
-
-    &:focus {
-      background-color: white;
-    }
-  }
   h2 {
     font-size: 18px;
     line-height: 24px;
     font-weight: bold;
     color: #4361ee;
+    margin-top: 10px;
   }
 `;
 
@@ -184,6 +162,7 @@ const GetStarted = styled.ul`
   width: 100%;
   display: flex;
   flex-direction: column;
+
   color: ${(props) => props.color};
 
   li {

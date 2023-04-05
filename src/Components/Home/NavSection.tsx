@@ -81,7 +81,13 @@ function NavSection({
               />
             )}
             <div className="line"></div>
-            <AiFillGithub className="icons" />
+            <a
+              className="linea"
+              href="https://github.com/mysticwillz/LazyFix"
+              target="_blank"
+            >
+              <AiFillGithub className="icons" />
+            </a>
             {!toggleTheme ? (
               <div className="icons">
                 <MdLightMode
@@ -207,6 +213,10 @@ const $Container = styled.nav`
     @media (min-width: 768px) {
       margin: 0px 20px 0px 40px;
     }
+  }
+  .linea {
+    text-decoration: none;
+    color: ${(props) => props.color};
   }
 
   .icons {
