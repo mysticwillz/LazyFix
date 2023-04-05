@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 interface Props {
   toggleTheme: boolean;
   showMenu: boolean;
-  setToggleTheme: (toggler: boolean) => void;
+  setToggleTheme: (toggleTheme: boolean) => void;
   setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 function NavSection({

@@ -2,6 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../Theme";
+import l1 from "../../Assets/l1.png";
+import l2 from "../../Assets/l2.jpg";
+import l3 from "../../Assets/l3.png";
+import l4 from "../../Assets/l4.png";
+import l5 from "../../Assets/l5.jpg";
+import l6 from "../../Assets/l6.jpg";
+import l7 from "../../Assets/l7.png";
 interface toggleProps {
   toggleTheme: boolean;
 }
@@ -80,13 +87,27 @@ function Sidebar({ toggleTheme }: toggleProps) {
         </Container>
         <h2>Sponsors</h2>
         <SponsorsContainer>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div>
+            <img src={l1} alt="sponsor" />
+          </div>
+          <div>
+            <img src={l2} alt="sponsor" />
+          </div>
+          <div>
+            <img src={l3} alt="sponsor" />
+          </div>
+          <div>
+            <img src={l4} alt="sponsor" />
+          </div>
+          <div>
+            <img src={l5} alt="sponsor" />
+          </div>
+          <div>
+            <img src={l6} alt="sponsor" />
+          </div>
+          <div>
+            <img src={l7} alt="sponsor" />
+          </div>
         </SponsorsContainer>
       </ContainerWrapper>
     </>
@@ -220,7 +241,7 @@ const SponsorsContainer = styled.div`
     align-items: center;
     width: 70px;
     height: 42px;
-    background-color: antiquewhite;
+    background-color: white;
     border: 1px solid gray;
   }
 
