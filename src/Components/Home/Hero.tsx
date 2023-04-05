@@ -6,6 +6,7 @@ import HeroImage from "../../Assets/Hero.png";
 import { theme } from "../../Theme";
 
 import NavModal from "./NavModal";
+import { Fade } from "react-awesome-reveal";
 
 interface Props {
   toggleTheme: boolean;
@@ -19,35 +20,42 @@ function Hero({ toggleTheme, showMenu, setShowMenu }: Props) {
   const navigate = useNavigate();
   return (
     <>
+      {" "}
       <$OverallContainer>
         <$HeroContainer>
+          {" "}
           <$HeroText color={toggleTheme ? theme.home_bg : theme.home_text}>
-            <h1>
-              Unlock your full <span>potential,</span> <br />
-              Utilize already built components.
-            </h1>
-            <p>
-              Let us take care of the small web components, <br />
-              so you can focus on optimizing and executing quality code.
-            </p>{" "}
-            <$HeroButton
-              onClick={() => {
-                navigate("/buttons");
-              }}
-            >
-              Start Building Now
-            </$HeroButton>
-          </$HeroText>
-
+            {" "}
+            <Fade direction={"left"} duration={1000}>
+              <h1>
+                Unlock your full <span>potential,</span> <br />
+                Utilize already built components.
+              </h1>
+              <p>
+                Let us take care of the small web components, <br />
+                so you can focus on optimizing and executing quality code.
+              </p>{" "}
+              <$HeroButton
+                onClick={() => {
+                  navigate("/buttons");
+                }}
+              >
+                Start Building Now
+              </$HeroButton>{" "}
+            </Fade>
+          </$HeroText>{" "}
           <$HeroImage>
-            <img
-              src={HeroImage}
-              alt=" A hero image showing people using lazyfix technology"
-            />
+            {" "}
+            <Fade direction={"right"} duration={1000}>
+              <img
+                src={HeroImage}
+                alt=" A hero image showing people using lazyfix technology"
+              />
+            </Fade>
           </$HeroImage>
         </$HeroContainer>
         {showMenu && <NavModal toggleTheme={toggleTheme} />}
-      </$OverallContainer>
+      </$OverallContainer>{" "}
     </>
   );
 }

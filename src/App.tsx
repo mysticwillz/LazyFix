@@ -15,7 +15,7 @@ import { ModeContext } from "./Context/ModeContext";
 import { useState } from "react";
 
 function App() {
-  const [toggleTheme, setToggleTheme] = useState<boolean>(true);
+  const [toggleTheme, setToggleTheme] = useState<boolean>(false);
   return (
     <>
       <ModeContext.Provider value={{ toggleTheme, setToggleTheme }}>
