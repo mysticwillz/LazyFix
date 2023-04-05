@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Container, Heading } from "../../Reusables/Styles";
 import { theme } from "../../Theme";
 import clicktocopy from "../../Assets/clicktocopy.png";
+import howto2 from "../../Assets/howto2.png";
+import howto3 from "../../Assets/howto3.png";
 interface toggleProps {
   toggleTheme: boolean;
 }
@@ -58,7 +60,7 @@ function GettingStarted({ toggleTheme }: toggleProps) {
           2. Choose the template to copy
         </Article>
         <ImageContainer>
-          <img src={clicktocopy} alt="first image description" />
+          <img src={howto2} alt="first image description" />
         </ImageContainer>
         <Article
           className="photo-heading"
@@ -67,7 +69,7 @@ function GettingStarted({ toggleTheme }: toggleProps) {
           3. Click copy to copy code snippet
         </Article>
         <ImageContainer>
-          <img src={clicktocopy} alt="first image description" />
+          <img src={howto3} alt="first image description" />
         </ImageContainer>
         <SubHeading className="conclusion-heading"> Conclusion</SubHeading>
         <Article color={toggleTheme ? theme.home_bg : theme.app_text_dark_big}>
